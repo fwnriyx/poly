@@ -1,6 +1,6 @@
 In this assignment, I would like to find out if whether Singapore is relatively better at conserving the environment than other countries. Using the datasets provided by data.gov and ourworldindata, I aim to compare the Nitrous Oxide quantity, total oil consumption as well as waste per plastic capita of other countries to Singapore, and see the if the conditions here are relatively better to live in. 
 
-The zipped folder contains info.ipynb, which looks at the different data and information of datasets that I have chosen. Using different plots and linear regressions, I found the different outliers and null values that appear in my data. One such example is the following code made to find the linear regression of ?:
+The zipped folder contains info.ipynb, which looks at the different data and information of datasets that I have chosen. Using different plots and linear regressions, I found the different outliers and null values that appear in my data. One such example is the following code made to find the linear regression of Total oil usage around the world:
 
 ```python
 reg = LinearRegression().fit(X, y)
