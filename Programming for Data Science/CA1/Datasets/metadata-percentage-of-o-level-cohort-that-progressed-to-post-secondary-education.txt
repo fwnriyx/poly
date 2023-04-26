@@ -1,0 +1,63 @@
+# Metadata for Percentage of O-Level Cohort that Progressed to Post-Secondary Education
+---
+Identifier: 'c09c9d88-cd60-4c42-a05b-948e1818eb35'
+Name: 'percentage-of-o-level-cohort-that-progressed-to-post-secondary-education'
+Title: 'Percentage of O-Level Cohort that Progressed to Post-Secondary Education'
+Description:
+  - 'Notes:'
+  - ''
+  - '1) Figures for 2016 - 2020 are preliminary as students from the same cohort could
+    be admitted to post-secondary education institutions later. Data for 2020 may
+    be under-estimates as the admission data for 2021 into private education institutions
+    is not available yet.'
+  - ''
+  - '2) Figures include participation in Junior Colleges, Millennia Institute, Polytechnics,
+    Institute of Technical Education (ITE), LASALLE College of the Arts, Nanyang Academy
+    of Fine Arts and other private education institutions, and take into account of
+    students who have left the country. From 2015 onwards, figures also include participation
+    in Privately-Funded Schools and Foreign System Schools.'
+Topics:
+  - 'Education'
+Keywords:
+  - 'Examination'
+  - 'O-level'
+  - 'Post-secondary'
+Publisher:
+  Name: 'Ministry of Education'
+  Admin 1:
+    Name: 'Chng Lung Huang'
+    Department: 'RMID'
+    Email: 'moe_management_information@moe.gov.sg'
+Sources:
+  - 'Ministry of Education'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '2008-01-01 to 2020-12-31'
+Last Updated: '2021-11-08T07:42:20.077380'
+Resources:
+  -
+    Identifier: '051c7a20-15fc-4aee-b8d5-42d9622c4ff5'
+    Title: 'Percentage of O-Level Cohort that Progressed to Post-Secondary Education'
+    Url: 'https://storage.data.gov.sg/percentage-of-o-level-cohort-that-progressed-to-post-secondary-education/resources/percentage-of-o-level-cohort-that-progressed-to-post-secondary-education-2021-10-18T06-20-55Z.csv'
+    Format: 'CSV'
+    Coverage: '2008-01-01 to 2020-12-31'
+    Last Updated: '2021-10-18T06:20:55.610070'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'race'
+        Title: 'Race'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'percentage_progress_postsec'
+        Title: 'Percentage progress postsec'
+        Type: 'numeric'
+        Sub Type: 'percentage'
+        Description: 'Percentages are expressed as a value over 100, i.e. "100" represents
+          100%'

@@ -1,0 +1,59 @@
+# Metadata for Percentage of GCE O-Level Students Who Passed English Language
+---
+Identifier: '6b548fe0-d002-4526-8108-e960f0a60382'
+Name: 'percentage-of-gce-o-level-students-who-passed-english-language'
+Title: 'Percentage of GCE O-Level Students Who Passed English Language'
+Description:
+  - 'Percentage of GCE O-Level Students Who Passed English Language'
+  - ''
+  - 'Notes:'
+  - '1. Figures exclude Integrated Programmes (IP) students.'
+  - '2. Figures include all school candidates except those who took O-Level subjects
+    not in their graduating year.'
+Topics:
+  - 'Education'
+Keywords:
+  - 'English'
+  - 'Examinations'
+  - 'O-Levels'
+  - 'Secondary Education'
+  - 'Students'
+Publisher:
+  Name: 'Ministry of Education'
+  Admin 1:
+    Name: 'Chng Lung Huang'
+    Department: 'Research & Management Information Division'
+    Email: 'moe_management_information@moe.gov.sg'
+Sources:
+  - 'Ministry of Education'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '1997-01-01 to 2020-12-31'
+Last Updated: '2021-10-18T02:11:02.005681'
+Resources:
+  -
+    Identifier: '83281660-6202-476d-bf31-af13a7c3da4c'
+    Title: 'Percentage of GCE O Level Students Who Passed English Language'
+    Url: 'https://storage.data.gov.sg/percentage-of-gce-o-level-students-who-passed-english-language/resources/percentage-of-gce-o-level-students-who-passed-english-language-2021-10-18T02-11-01Z.csv'
+    Format: 'CSV'
+    Coverage: '1997-01-01 to 2020-12-31'
+    Last Updated: '2021-10-18T02:11:01.481072'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'race'
+        Title: 'Race'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'percentage_pass_eng'
+        Title: 'Percentage pass eng'
+        Type: 'numeric'
+        Sub Type: 'percentage'
+        Description: 'Percentages are expressed as a value over 100, i.e. "100" represents
+          100%'

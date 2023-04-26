@@ -1,0 +1,46 @@
+# Metadata for Government Total Expenditure on Education
+---
+Identifier: '9eef507c-6d3a-4db7-90d0-0c6cac9d6e1b'
+Name: 'government-expenditure-on-education'
+Title: 'Government Total Expenditure on Education'
+Description:
+  - 'The table shows the total amount spent by government on education.'
+  - 'Note: The latest figures are preliminary.'
+Topics:
+  - 'Education'
+Keywords:
+  - 'Government Expenditure'
+  - 'Schools'
+  - 'Students'
+Publisher:
+  Name: 'Ministry of Education'
+  Admin 1:
+    Name: 'Chng Lung Huang'
+    Department: 'Research & Management Information Division'
+    Email: 'moe_management_information@moe.gov.sg'
+Sources:
+  - 'Ministry of Education'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '1981-01-01 to 2020-12-31'
+Last Updated: '2021-10-26T03:51:16.093924'
+Resources:
+  -
+    Identifier: '79a62357-49ec-4d78-9d00-50b0cf73084c'
+    Title: 'Government Expenditure on Education'
+    Url: 'https://storage.data.gov.sg/government-expenditure-on-education/resources/government-expenditure-on-education-2021-10-26T03-09-34Z.csv'
+    Format: 'CSV'
+    Coverage: '1981-01-01 to 2020-12-31'
+    Last Updated: '2021-10-26T03:09:34.507197'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'total_expenditure_on_education'
+        Title: 'Total expenditure on education'
+        Type: 'text'
+        Sub Type: 'general'

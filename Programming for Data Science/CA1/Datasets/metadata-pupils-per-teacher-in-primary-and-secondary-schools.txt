@@ -1,0 +1,75 @@
+# Metadata for Pupils Per Teacher in Primary And Secondary Schools
+---
+Identifier: '9e871677-d0c5-424c-9d40-33a1aa486c40'
+Name: 'pupils-per-teacher-in-primary-and-secondary-schools'
+Title: 'Pupils Per Teacher in Primary And Secondary Schools'
+Description:
+  - 'No. of pupils per teacher in primary and secondary schools.'
+  - ''
+  - 'Note: -  Figures for secondary schools include students and teachers in Government,
+    Government-Aided, Independent, Specialised Independent, Specialised schools.'
+  - '- The ratio of students to teaching staff or what is known as the Pupil-Teacher
+    Ratio (PTR), is the number of primary/secondary students divided by the number
+    of teachers in primary/secondary schools.'
+Topics:
+  - 'Education'
+Keywords:
+  - 'Primary Education'
+  - 'Schools'
+  - 'Secondary Education'
+  - 'Students'
+Publisher:
+  Name: 'Ministry of Education'
+  Admin 1:
+    Name: 'Chng Lung Huang'
+    Department: 'Research & Management Information Division'
+    Email: 'moe_management_information@moe.gov.sg'
+Sources:
+  - 'Ministry of Education'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '1981-01-01 to 2020-12-31'
+Last Updated: '2021-10-18T03:24:55.099844'
+Resources:
+  -
+    Identifier: '4eaef5ca-fda9-4e57-82dd-ccb58ca997a0'
+    Title: 'Pupils Per Teacher in Primary Schools'
+    Url: 'https://storage.data.gov.sg/pupils-per-teacher-in-primary-and-secondary-schools/resources/pupils-per-teacher-in-primary-schools-2021-10-18T03-23-31Z.csv'
+    Format: 'CSV'
+    Coverage: '1981-01-01 to 2020-12-31'
+    Last Updated: '2021-10-18T03:23:31.467381'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'primary_students_to_teaching_staff'
+        Title: 'Primary Students To Teaching Staff'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'No. of Students Per Teacher'
+  -
+    Identifier: '2f25f030-ce00-468d-aef4-b63247ec1035'
+    Title: 'Pupils Per Teacher in Secondary Schools'
+    Url: 'https://storage.data.gov.sg/pupils-per-teacher-in-primary-and-secondary-schools/resources/pupils-per-teacher-in-secondary-schools-2021-10-18T03-24-54Z.csv'
+    Format: 'CSV'
+    Coverage: '1981-01-01 to 2020-12-31'
+    Description: 'Note:  Figures include students and teachers in Government, Government-Aided,
+      Independent, Specialised Independent, Specialised schools.'
+    Last Updated: '2021-10-18T03:24:54.588013'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'sec_pupil_to_teacher'
+        Title: 'Sec pupil to teacher'
+        Type: 'numeric'
+        Sub Type: 'general'
+        Unit Of Measure: 'ratio'

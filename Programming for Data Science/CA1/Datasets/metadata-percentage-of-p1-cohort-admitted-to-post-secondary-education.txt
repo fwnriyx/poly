@@ -1,0 +1,69 @@
+# Metadata for Percentage of P1 Cohort that Progressed to Post-Secondary Education
+---
+Identifier: '8351d06c-356e-4dd9-8fde-47509435986e'
+Name: 'percentage-of-p1-cohort-admitted-to-post-secondary-education'
+Title: 'Percentage of P1 Cohort that Progressed to Post-Secondary Education'
+Description:
+  - 'Note:'
+  - ''
+  - '1) Refers to the year in which the typical student in that particular cohort
+    would progressed to a post-secondary education institution (10 years after P1).'
+  - ''
+  - '2) Figures for 2016-2020 are preliminary as students from the same cohort could
+    be admitted to post-secondary education institutions later.'
+  - ''
+  - '3) Figures include participation in Junior Colleges, Millennia Institute, Polytechnics,
+    Institute of Technical Education (ITE), LASALLE College of the Arts, Nanyang Academy
+    of Fine Arts and other private education institutions, and take into account students
+    who have left the country. From 2015 onwards, figures also include participation
+    in Privately-Funded Schools and Foreign System Schools.'
+  - ''
+Topics:
+  - 'Education'
+Keywords:
+  - 'Degree'
+  - 'Diploma'
+  - 'ITE'
+  - 'P1 Cohort'
+  - 'Pre-University'
+  - 'Schools'
+  - 'Students'
+  - 'Tertiary Education'
+Publisher:
+  Name: 'Ministry of Education'
+  Admin 1:
+    Name: 'Chng Lung Huang'
+    Department: 'Research & Management Information Division'
+    Email: 'moe_management_information@moe.gov.sg'
+Sources:
+  - 'Ministry of Education'
+License: 'https://data.gov.sg/open-data-licence'
+Frequency: 'Annual'
+Coverage: '1995-01-01 to 2020-12-31'
+Last Updated: '2021-11-08T07:37:47.616116'
+Resources:
+  -
+    Identifier: '6d8044d1-ee0c-4a58-9e96-24713212a8a1'
+    Title: 'Percentage of P1 Cohort that Progressed to Post Secondary Education'
+    Url: 'https://storage.data.gov.sg/percentage-of-p1-cohort-admitted-to-post-secondary-education/resources/percentage-of-p1-cohort-that-progressed-to-post-secondary-education-2021-11-05T04-08-51Z.csv'
+    Format: 'CSV'
+    Coverage: '1995-01-01 to 2020-12-31'
+    Last Updated: '2021-11-05T04:08:51.904308'
+    Schema:
+      -
+        Name: 'year'
+        Title: 'Year'
+        Type: 'datetime'
+        Sub Type: 'year'
+        Format: 'YYYY'
+      -
+        Name: 'race'
+        Title: 'Race'
+        Type: 'text'
+        Sub Type: 'general'
+      -
+        Name: 'percentage'
+        Title: 'Percentage'
+        Type: 'text'
+        Sub Type: 'general'
+        Description: '"na" : Data not available or not applicable'
