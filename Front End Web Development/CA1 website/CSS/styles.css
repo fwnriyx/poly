@@ -1,0 +1,16 @@
+@charset "utf-8"; 
+
+.nav {
+    text-align: center;
+}
+      
+h4{
+    /* h4 style */
+    font-size: 40px;
+}
+
+
+a:hover {
+    /* links style when hovered */
+    text-decoration: underline;
+}

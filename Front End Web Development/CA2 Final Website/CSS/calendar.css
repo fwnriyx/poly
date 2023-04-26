@@ -1,0 +1,13 @@
+#calendar {
+    padding-top: 90px;
+    padding-left: 70px;  
+}
+
+h1 {
+    color: black;
+    margin-top: 100px;
+    text-align: center;
+}
+html,h1,#calendar {
+    background-color: aquamarine;
+}

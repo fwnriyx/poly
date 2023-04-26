@@ -1,0 +1,15 @@
+@charset "utf-8"; 
+
+.nav link {
+    font-size: 2vw;
+}
+
+div {
+    font-size: 1.1em;
+}
+
+
+a:hover {
+    /* links style when hovered */
+    text-decoration: underline;
+}

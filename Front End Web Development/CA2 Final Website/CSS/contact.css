@@ -1,0 +1,61 @@
+html {
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+ html,body,fieldset{
+    background-image: url('CSSpics/scenery3.jpg');
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+fieldset#userInfo{
+    /*settings for first form */
+    width: 270%;    
+    box-sizing: border-box; 
+    margin-top: 2px;
+}
+
+div.formInfo {
+    /*Container for categories of first form */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-top: 55px;
+}
+
+input[type=text], input[type=email], input[type=tel]  {
+    /*Style of different input types */
+    width: 90%;
+    padding: 10px;
+    border: none;
+}
+
+.btn {
+    /* Button style */
+    background-color: teal;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: solid black 2px;
+    text-align: center;
+    width: 90%;
+}
+
+.btn:hover {
+    /* Button when hovered */
+    background-color: cyan;
+    color: beige;
+}
+
+  div {
+      font-size: 1.1em;
+  }

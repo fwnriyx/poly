@@ -1,0 +1,104 @@
+html {
+  /* to make sure that theres no x axis scroll bar */
+  overflow-x: hidden;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* designing the background */
+  background-image: url('CSSpics/scenery1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.arrow_container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0px auto;
+}
+
+.row {
+  display: flex;
+}
+
+.chevron {
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  transform: scale3d(1, 1, 1);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+ 
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+ 
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+
+@keyframes pulse { 
+  }
+  @keyframes move {
+    25% {
+      opacity: 1;
+   
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+
+.textS {
+  padding-top: 5%;
+  color: white;
+  font-size: 6em;
+  text-align: center;
+}
+
+.table {
+  margin-top: 20%;
+  height: 100vh;
+  min-width: 100%;
+  font-size: 1.5em;
+}
+

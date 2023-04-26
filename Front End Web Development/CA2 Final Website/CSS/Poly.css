@@ -1,0 +1,75 @@
+html {
+  overflow-x: hidden;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.life {
+  background-image: url('CSSpics/finalScenery.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.choices {
+  padding-left: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 55px;
+}
+
+h3.course {
+  padding: 25px;
+  padding-top: 200px;  
+  color: white;
+}
+
+.preText, .preText2 {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  box-shadow: 5px 7px #63666A;
+  font-size: 0.95em;
+}
+
+.DISM,.DAAA, .DIT  {
+  background-color: white;
+  font-size: 0.8em;
+  width: 80%;
+  text-align: center;
+}
+
+.cartoons {
+  width: 60%;
+  height: 30%;
+}
+
+div.modal-body {
+  font-size: 0.6em;
+}
+
+h3 {
+  text-align: center;
+  padding-left: -100px;
+}
+
+.cart1, .c {
+  height: 60%;
+  width: 60%;
+}
+
+.btn {
+  margin-left: 40%;
+}

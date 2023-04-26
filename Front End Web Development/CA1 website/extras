@@ -1,0 +1,155 @@
+    <!-- <section id="main">
+        <table class="timetable">
+            <!--Inserting a timetable-->
+            <!-- <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tr>
+                <th>8.00 - 9.00</th>
+                <td rowspan="2" colspan="3" id="bLank"><br></td>
+                <td rowspan="2" id="lesson">ST2413[FOC]<br><sub>T22510</sub></td>
+                <td rowspan="4" id="lesson">ST0502[FOP]<br><sub>T22510</sub></td>
+            </tr>
+            <tr>
+                <th>9.00 - 10.00</th>
+            </tr>
+            <tr>
+
+                <th>10.00 - 10.30</th>
+                <td rowspan="3"></td>
+                <td rowspan="3" id="lesson">ST2431[FOC]<br><sub>T2255</sub></td>
+            </tr>
+            <tr>
+                <th>10.30 - 11.00</th>
+                <td colspan="2" rowspan="3" id="lesson">ST0501[FED]<br><sub>T22510</sub></td>
+            </tr>
+            <tr>
+                <th>11.00 - 12.00</th>
+                <td rowspan="2"></td>
+            </tr>
+            <tr>
+                <th> 12.00 - 13.00</th>
+                <td id="bLank"></td>
+                <td colspan="2" id="bLank"></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <th>13.00 - 14.00</th>
+                <td rowspan="2" id="lesson">SP108B[ECG]<br><sub>T22510</sub></td>
+                <td id="lesson" rowspan="3">ST0502[FOP]<br><sub>T22510</sub></td>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <th>14.00 - 15.00</th>
+                <td id="bLank"></td>
+                <td id="bLank"></td>
+                <td rowspan="2" id="lesson">MS0105[MATH]<br><sub>T2151</sub></td>
+            </tr>
+            <tr>
+                <th>15.00 - 16.00</th>
+                <td id="lesson">MS0105[MATH]<br><sub>T22510</sub></td>
+                <td id="bLank"></td>
+                <td id="lesson" rowspan="2">LC0855[CPR]<br><sub>T2255</sub></td>
+            </tr>
+            <tr>
+                <th>16.00 - 17.00</th>
+                <td rowspan="2"></td>
+                <td rowspan="2" id="lesson">LC0860[CAT]<br><sub>T22510</sub></td>
+                <td rowpsan="2" colspan="2" id="bLank"></td>
+            </tr>
+            <tr>
+                <th>17.00 - 18.00</th>
+                <td id="bLank"></td>
+                <td rowspan="2" id="bLank"></td>
+            </tr>
+        </table>
+
+
+    </section>  -->
+
+
+
+
+    <!-- <div class="schoolP"></div>
+    <p id="rcorners">I entered Singapore Polytechnic as a Year 1 in April 2022. My experience so far has been nothing
+        less than delightful.
+        Despite being from different backgrounds, the activities held on the orientation day helped us to know each
+        other better
+        as classmates, which helped to spark more conversations and friendships. It
+        is much more different than secondary school as it is more self oriented and I had to work on my time
+        management. In my opinion, DCITP is a good course as the workload is not too high and it sets the stepping
+        stones for us before we progress into the next semester At the end of this semester,
+        I am required to choose between Infocomm Security Management(DISM), Information Technology(DIT), or Applied AI
+        and Analytics(DAAA)! But for now,
+        below is a rough overview of every school week, and to the right, is the different courses I can pick at the end
+        of the semester:
+    </p>
+    <div class="row">
+        <div class="column1">
+            <h2>DIT:</h2><br>
+            <p id="rcorners2">According to the SP website, after the first semester, Diploma in Information
+                Technology (DIT) students will be learning more in depth Software Development
+                User Experience (UX) Immersive Simulation and have an internship that starts in year 3 spanning for
+                about 22 weeks. Some of the Career
+                options that are available are Software Quality Assurance Engineer, UI Designer and UX Designer. In my
+                opinion, this is my least
+                preferred course among the three I have to pick from this term as I do not have much interest in these
+                career options and topics. Learn
+                more <a id="spLinks" style="color: blue;"
+                    href="https://www.sp.edu.sg/soc/courses/full-time-diplomas/information-technology/overview">
+                    here</a>.
+            </p>
+            <img id="itStock" src="HTMLpics/infotechstock.jpg" alt="Stock image of Information Technology"> -->
+            <!--Inserting a photo-->
+            <!--
+            Credit: https://www.vectorstock.com/royalty-free-vector/information-technology-data-poster-vector-21265478
+            -->
+        <!-- </div>
+        <div class="column2">
+            <h2>DISM:</h2><br>
+            <p id="rcorners3">In SP, Diploma in Infocomm Security Management (DISM) students will be learning more about
+                security technology, security management, information technology, law and teamwork and communications.
+                They
+                will also have an internship in year 3 that lasts for roughly 22 weeks. Some of the career options that
+                are
+                available include: Cyber Risk Analyst, Forensic Investigator and Incident Investigator. In my opinion,
+                this is
+                my most preferred course as I have the most interest in the career options as well as the topics taught
+                throughout
+                the next few years. Learn more <a id="spLinks" style="color: blue;"
+                    href="https://www.sp.edu.sg/soc/courses/full-time-diplomas/infocomm-security-management/overview">
+                    here</a>.
+            </p>
+            <img id="cSecurityStock" src="HTMLpics/csecuritystock.jpg" alt="Stock image of Infocomm Security Management">
+            <!--Inserting a photo-->
+            <!--
+            Credit : https://br.freejpg.com.ar/imagens/premium/1174366497/cyber-security-e-conceito-de-protecao-de-dados-digitais
+            -->
+        <!-- </div>
+        <div class="column3">
+            <h2>DAAA:</h2>
+            <p id="rcorners4">In SP, Diploma in Applied AI and Analytics (DAAA) students are able to learn how to
+                develop AI applications that
+                benefits our world. They constantly receive new challenges that they get to pick at. Some of the topics
+                they will learn are Data Engineering, Deep Learning as well as Data Structures & Algorithm. In my opinion, I am
+                slightly interested in this course as it broadens my knowledge regarding the technology that we use around us, but I am
+                not too interested in going in depth into these topics. Hence, I am more interested in this course than DIT, but less than
+                DISM. Learn more <a id="spLinks" style="color: blue;"
+                href="https://www.sp.edu.sg/soc/courses/full-time-diplomas/applied-AI-and-analytics/overview">
+                here</a>.
+        </p>
+            <img id="AAAstock" src="HTMLpics/AAAstock.jpg" alt="Stock image of Applied AI and Analytics">
+            <!--
+            https://stock.adobe.com/sg/images/ai-artificial-intelligence-conceptual-with-computer-interface-of-business-team-big-data-management-use-ai-technology-computing/284975811
+            -->
+        </div>
+
+    </div> --> --> -->

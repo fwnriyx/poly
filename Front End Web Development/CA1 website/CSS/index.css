@@ -1,0 +1,191 @@
+html {
+  overflow-x: hidden;   
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("CSSpics/scenerYYYY.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img#myPic {
+  /* Setting the pictures up */
+  border-radius: 10%;
+  width: 20%;
+  top: 10%;
+  float: left;
+}
+
+nav {
+  display: fixed;
+}
+
+
+h1 {
+  /* h1 style */
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+  /* h2 style */
+  color: white;
+}
+
+.column1 {
+  float: right;
+  clear: left;    
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 200px;
+  text-align: center;
+  box-shadow: 5px 10px #63666A;
+}
+
+.column2 {
+  width: 80%;
+  clear: left;
+  position: relative;
+  overflow: hidden;
+  margin-left: 78%;
+  margin-top: -20%;
+}
+
+#rcorners1 {
+  /* forming a shape around the text to segment it properly */
+  border-radius: 20px;
+  border: 2px solid #208d7f;
+  padding: 30px;
+  padding-bottom: 75px;
+  padding-right: 20px;
+  width: 25%;
+  height: 175px;
+  margin-left: 2px;
+  vertical-align: top;
+  text-align: left;
+  background: white;
+  opacity: 0.8;
+  font-size: 0.75em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#chessStock {
+  /* Stock photo of chess board */
+  width: 15%;
+}
+
+.row1 {
+  padding: 5px; 
+  margin-top: 200px;    
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;  
+  margin-top: -15%;
+  margin-left: 60px;
+  bottom: 20px;
+}
+
+#rcorners2 {
+  /* forming a shape around the text to segment it properly */
+  border-radius: 25px;
+  border: 2px solid #62d9c9;
+  padding: 35px;
+  width: 100%;
+  height: 280px;
+  padding-right: 25px;
+  font-size: 1.1em;
+  text-align: center;
+  color: brown;
+  background: white;
+  opacity: 0.8;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#rcorners3 {
+  /* forming a shape around the text to segment it properly */
+  border-radius: 25px;
+  border: 2px solid #62d9c9;
+  padding: 35px;
+  width: 100%;
+  height: 270px;
+  font-size: 1.1em;
+  text-align: center;
+  color: brown;
+  background: white;
+  opacity: 0.8;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+img#hobby2 {
+  height: 10%;
+  width: 10%;
+}
+
+#rcorners4 {
+  /* forming a shape around the text to segment it properly */
+  border-radius: 20px;
+  border: 2px solid #208d7f;
+  padding: 30px;
+  padding-bottom: 80px;
+  padding-right: 20px;
+  width: 25%;
+  height: 175px;
+  margin-left: 2px;
+  vertical-align: top;
+  text-align: left;
+  background: white;
+  opacity: 0.8;
+  font-size: 0.75em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* a#hobby2 {
+  font-size: 1em;
+  color: blue;
+}
+
+a#vbVideo {
+  font-size: 1em;
+  color: blue;
+} */
+
+div#demo {
+  margin-top : 175px;
+  width: 90%;
+  text-align: center;
+  left: 6%;
+}

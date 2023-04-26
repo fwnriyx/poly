@@ -1,0 +1,112 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url('CSSpics/scenery3.jpg');
+    /* background picture */
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: fixed;
+}
+
+fieldset#userInfo{
+    /*settings for first form */
+    width: 270%;  
+    padding: 0px;  
+    box-sizing: border-box; 
+    margin-top: 2px;
+    padding-top: 0px; 
+    padding-bottom: 20px;
+}
+
+fieldset#custReview{
+    /*settings for second form */
+    width: 100%;  
+    padding: 10px;  
+    box-sizing: border-box; 
+    margin-top: -75px;
+    padding-top: 60px;
+    display: fixed;
+}
+
+div.formInfo {
+    /*Container for categories of first form */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top:6px;
+    margin-bottom: 16px;
+}
+
+div.formR {
+    /*Container for categories of second form */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top:6px;
+    margin-bottom: 50px;
+}
+
+input[type=text], input[type=email], input[type=tel]  {
+    /*Style of different input types */
+    width: 90%;
+    padding: 15px;
+    margin: 13px 5px;
+    border: none;
+}
+
+.btn {
+    /* Button style */
+    background-color: teal;
+    color: white;
+    padding: 30px;
+    border-radius: 4px;
+    margin-right: 120px;
+    text-align: center;
+    
+}
+
+.btn:hover {
+    /* Button when hovered */
+    background-color: cyan;
+    color: beige;
+}
+legend {
+    /* legend of both forms */
+    font-size: 20px;
+    text-align: center;
+    padding: 0.5% 0.5%;
+    width: 30%;
+    margin: 0 34%;
+}  
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    display: flex;
+  }
+   
+.row {
+    /* Setting of overall form*/
+    vertical-align: bottom;
+    padding: 5px;
+  }
+
+  textarea {
+      /* Final text box area */
+    width: 100%;
+    height: 167px;
+    box-sizing: border-box;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1.3em;
+  }
+
+  div {
+      font-size: 1.1em;
+  }
