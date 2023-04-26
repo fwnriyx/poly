@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<head>
+  <title>SP DVD | Admin Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+  <!--Bootstrap stuff-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link href="css/add.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <a class="navbar-brand" href="/index.html"><b class="text-danger">SP DVD</b></a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/DVD.html">Products</a>
+        </li>
+        <li class="nav-item" id="navbarTogglerDemo02">
+          <a class="nav-link" id="admin" href="/add.html">Admin</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0 pr-3">
+        <li class="nav-item" id="logInOut">
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="box">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="section" style="margin-top: -80px;">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center">
+            <h6 class="mb-0 pb-3"><span>Actors </span><span>Customers</span></h6>
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+            <label for="reg-log"></label>
+            <div class="card-3d-wrap mx-auto" style="margin-top: 100px;">
+              <div class="card-3d-wrapper">
+                <div class="card-front"
+                  style="height: 60vh; margin-top: -50px;margin-bottom: 200px;padding-bottom: 80vh">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Add Actors</h4>
+                      <div class="form-group">
+                        <input type="text" name="first_name" class="form-style" placeholder="First name" id="first_name"
+                          autocomplete="off" required="required">
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" name="last_name" class="form-style" placeholder="Last name"
+                          id="last_name" autocomplete="off" required="required">
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <div id="success"></div>
+                      <a href="#" class="btn mt-4" id="addActors">submit</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back" style="margin-bottom: 200px; padding-bottom: 80vh;">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Add Customers</h4>
+                      <div style="display: flex; justify-content: space-between">
+                        <input type="number" name="Store id" class="form-style" placeholder="Store id" id="store_id"
+                          autocomplete="off">
+                        <input type="number " name="City id" class="form-style" placeholder="City id" id="city_id"
+                          autocomplete="off">
+                      </div>
+                      <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <input type="text" name="first_name1" class="form-style" placeholder="First Name"
+                          id="first_name1" autocomplete="off">
+                        <input type="text" name="last_name1" class="form-style" placeholder="Last Name" id="last_name1"
+                          autocomplete="off">
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="email" name="email" class="form-style" placeholder="Email" id="email"
+                          autocomplete="off">
+                        <input type="text" name="address1" class="form-style" placeholder="Address line 1" id="address1"
+                          autocomplete="off">
+                        <input type="text" name="address2" class="form-style" placeholder="Address line 2" id="address2"
+                          autocomplete="off">
+                      </div>
+                      <div style="display: flex; justify-content: space-between">
+                        <input type="text" name="district" class="form-style" placeholder="District" id="district"
+                          autocomplete="off">
+                        <input type="number" name="postal_code" class="form-style" placeholder="Postal code"
+                          id="postal_code" autocomplete="off">
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="number" name="phone" class="form-style" placeholder="Phone" id="phone"
+                          autocomplete="off">
+                      </div>
+                      <div id="success"></div>
+                      <a href="#" class="btn mt-4" id="addCust">submit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Check user login-->
+  <script>
+    var login = false
+    $(document).ready(function () {
+      if (localStorage.getItem('token')) {
+        var login = true
+        console.log(localStorage.getItem('token'))
+        document.getElementById("logInOut").innerHTML = `<a role="button" name="button" class="btn btn-danger" href="#" id="logout">Log Out</a>`
+      } else {
+        window.location.assign("/login.html")
+        console.log("not logged in")
+        document.getElementById("logInOut").innerHTML = `<a role="button" name="button" class="btn btn-primary" href="./login.html" id="login">Admin Login</a>`
+      }
+    })
+  </script>
+  <!--Logout function-->
+  <script>
+    $(document).ready(function () {
+      $("#logout").click(function () {
+        localStorage.removeItem("token");
+        localStorage.removeItem("staff_id");
+        window.location.assign("/");
+      })
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+      if (localStorage.getItem('token')) {
+        console.log(localStorage.getItem('token'))
+        document.getElementById("adminF").innerHTML = `<a class="nav-link" id="adminf" href="./add.html">Admin</a>`
+      } else {
+        console.log("not logged in")
+        document.getElementById("adminF").innerHTML = `<a class="nav-link" id="adminf" href="./login.html">Admin</a>`
+      }
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#addActors").click(function () {
+        var first_name = $('#first_name').val();
+        var last_name = $('#last_name').val();
+        var data = `{"first_name": "${first_name}", "last_name": "${last_name}"}`;
+
+        $.ajax({
+          url: 'http://localhost:3000/add/actors',
+          type: 'POST',
+          data: data,
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function (data, status, xhr) {
+            if (data != null) {
+              console.log(data)
+              document.getElementById('success1').innerHTML = "<p class='text-success'>Actor added successfully</p>"
+            } else {
+              console.log("Error");
+            }
+          }
+        });
+        return false;
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#addCust").click(async function () {
+        var first_name1 = $("#first_name1").val();
+        var last_name1 = $("#last_name1").val();
+        var email = $("#email").val();
+        var store_id = $("#store_id").val();
+        var city_id = $("#city_id").val();
+        var address1 = $("#address1").val();
+        var address2 = $("#address2").val();
+        var district = $("#district").val();
+        var postal_code = $("#postal_code").val();
+        var phone = $("#phone").val();
+        var data = {
+          first_name1: first_name1,
+          last_name1: last_name1,
+          email: email,
+          store_id: store_id,
+          address: {
+            city_id: city_id,
+            address1: address1,
+            address2: address2,
+            district: district,
+            postal_code: postal_code,
+            phone: phone
+          }
+        };
+
+        try {
+          const response = await axios.post("http://localhost:8081/customers", data);
+          console.log(response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      });
+    });
+  </script>
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      if (localStorage.getItem('token')) {
+        console.log(localStorage.getItem('token'))
+        document.getElementById("adminF").innerHTML = `<a class="nav-link" id="adminf" href="./add.html">Admin</a>`
+      } else {
+        console.log("not logged in")
+        document.getElementById("adminF").innerHTML = `<a class="nav-link" id="adminf" href="./login.html">Admin</a>`
+      }
+    })
+  </script>
+</body>
