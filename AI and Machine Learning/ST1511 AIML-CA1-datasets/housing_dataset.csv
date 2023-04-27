@@ -1,0 +1,546 @@
+House ID,City,House Area (sqm),No. of Bedrooms,No. of Toilets,Stories,Renovation Status,Price ($)
+0,Chicago,742,4,2,3,furnished,1330000
+1,Denver,896,4,4,4,furnished,1225000
+2,Chicago,996,3,2,2,semi-furnished,1225000
+3,Seattle,750,4,2,2,furnished,1221500
+4,New York,742,4,1,2,furnished,1141000
+5,Boston,750,3,3,1,semi-furnished,1085000
+6,Denver,858,4,3,4,semi-furnished,1015000
+7,New York,1620,5,3,2,unfurnished,1015000
+8,Denver,810,4,1,2,furnished,987000
+9,Seattle,575,3,2,4,unfurnished,980000
+10,Boston,1320,3,1,2,furnished,980000
+11,Boston,600,4,3,2,semi-furnished,968100
+12,Seattle,655,4,2,2,semi-furnished,931000
+13,Boston,350,4,2,2,furnished,924000
+14,Chicago,780,3,2,2,semi-furnished,924000
+15,Denver,600,4,1,2,semi-furnished,910000
+16,New York,660,4,2,2,unfurnished,910000
+17,New York,850,3,2,4,furnished,896000
+18,New York,460,3,2,2,furnished,889000
+19,Chicago,642,3,2,2,semi-furnished,885500
+20,Chicago,432,3,1,2,semi-furnished,875000
+21,Seattle,715.5,3,2,1,unfurnished,868000
+22,Seattle,805,3,1,1,furnished,864500
+23,Seattle,456,3,2,2,furnished,864500
+24,Seattle,880,3,2,2,furnished,857500
+25,Boston,654,4,2,2,furnished,854000
+26,Seattle,600,3,2,4,semi-furnished,846300
+27,Boston,887.5,3,1,1,semi-furnished,840000
+28,Denver,795,5,2,2,unfurnished,840000
+29,New York,550,4,2,2,semi-furnished,840000
+30,Boston,747.5,3,2,4,unfurnished,840000
+31,Seattle,700,3,1,4,semi-furnished,840000
+32,Denver,488,4,2,2,furnished,829500
+33,New York,596,3,3,2,unfurnished,819000
+34,Denver,684,5,1,2,furnished,812000
+35,Chicago,700,3,2,4,furnished,808094
+36,Seattle,748.2,3,2,3,furnished,804300
+37,New York,900,4,2,4,furnished,798000
+38,Seattle,600,3,1,4,unfurnished,796250
+39,Chicago,600,4,2,4,semi-furnished,791000
+40,New York,655,3,1,2,furnished,787500
+41,Boston,636,3,2,4,furnished,784000
+42,New York,648,3,2,4,unfurnished,770000
+43,Boston,600,4,2,4,semi-furnished,770000
+44,New York,600,4,2,4,furnished,756000
+45,Seattle,600,3,2,3,semi-furnished,756000
+46,New York,600,3,2,4,furnished,752500
+47,Denver,660,3,1,4,furnished,749000
+48,Denver,430,3,2,2,unfurnished,745500
+49,Boston,744,3,2,1,semi-furnished,742000
+50,Chicago,744,3,2,4,unfurnished,742000
+51,Chicago,632.5,3,1,4,unfurnished,742000
+52,New York,600,4,2,4,furnished,735000
+53,Boston,515,3,2,4,semi-furnished,735000
+54,Boston,600,3,2,2,semi-furnished,735000
+55,Denver,600,3,1,2,unfurnished,735000
+56,New York,1144,4,1,2,semi-furnished,734300
+57,Boston,900,4,2,4,furnished,724500
+58,New York,768,4,2,4,semi-furnished,721000
+59,Boston,600,3,2,4,furnished,721000
+60,Boston,600,3,2,2,semi-furnished,714000
+61,Boston,888,2,1,1,semi-furnished,707000
+62,Chicago,624,4,2,2,furnished,707000
+63,Seattle,636,4,2,3,furnished,703500
+64,New York,1117.5,3,1,1,furnished,700000
+65,Seattle,888,3,2,2,furnished,693000
+66,Denver,1320,2,1,1,furnished,693000
+67,Denver,770,3,2,1,unfurnished,689500
+68,Seattle,600,3,1,1,furnished,686000
+69,Boston,1209,4,2,2,furnished,679000
+70,Boston,400,3,2,2,semi-furnished,679000
+71,Boston,600,4,2,4,unfurnished,675500
+72,New York,502,3,1,4,unfurnished,672000
+73,New York,660,2,2,4,furnished,668500
+74,Denver,404,3,1,2,furnished,665000
+75,Boston,426,4,2,2,semi-furnished,665000
+76,New York,642,3,2,3,furnished,665000
+77,Denver,650,3,2,3,furnished,665000
+78,Seattle,570,3,1,1,furnished,665000
+79,New York,600,3,2,3,furnished,665000
+80,New York,600,3,1,2,semi-furnished,662900
+81,New York,400,3,2,2,semi-furnished,661500
+82,Seattle,1050,3,2,1,furnished,661500
+83,Chicago,600,3,2,4,semi-furnished,658000
+84,Chicago,376,3,1,2,semi-furnished,651000
+85,New York,825,3,2,3,furnished,651000
+86,Denver,667,3,1,3,unfurnished,651000
+87,New York,396,3,1,1,semi-furnished,647500
+88,New York,741,3,1,1,unfurnished,647500
+89,Chicago,858,5,3,2,furnished,644000
+90,Boston,500,3,1,2,semi-furnished,644000
+91,New York,675,2,1,1,furnished,641900
+92,Seattle,480,3,2,4,furnished,640500
+93,Denver,720,3,2,1,semi-furnished,630000
+94,Chicago,600,4,2,4,semi-furnished,630000
+95,Seattle,410,3,2,3,semi-furnished,630000
+96,New York,900,3,1,1,furnished,630000
+97,New York,640,3,1,1,semi-furnished,630000
+98,Denver,660,3,2,3,unfurnished,629300
+99,New York,600,4,1,3,unfurnished,626500
+100,Denver,660,3,2,1,unfurnished,623000
+101,Chicago,550,3,1,3,unfurnished,623000
+102,Seattle,550,3,2,4,semi-furnished,619500
+103,Chicago,635,3,2,3,furnished,619500
+104,Denver,550,3,2,1,furnished,619500
+105,New York,450,3,1,4,unfurnished,616000
+106,Seattle,545,4,2,1,semi-furnished,616000
+107,Chicago,642,3,1,3,unfurnished,612500
+108,Chicago,324,4,1,3,semi-furnished,610750
+109,Chicago,661.5,4,2,2,semi-furnished,609000
+110,Boston,660,3,1,1,semi-furnished,609000
+111,New York,837.2,3,1,3,unfurnished,609000
+112,Seattle,430,6,2,2,furnished,608300
+113,Boston,962,3,1,1,furnished,608300
+114,Seattle,680,2,1,1,furnished,602000
+115,New York,800,3,1,1,semi-furnished,602000
+116,Seattle,690,3,2,1,unfurnished,602000
+117,New York,370,4,1,2,furnished,595000
+118,New York,642,3,1,1,furnished,595000
+119,New York,702,3,1,1,semi-furnished,595000
+120,Seattle,654,3,1,1,furnished,595000
+121,Seattle,723.1,3,1,2,semi-furnished,595000
+122,Boston,625.4,4,2,1,semi-furnished,595000
+123,New York,732,4,2,2,furnished,595000
+124,Denver,652.5,3,2,4,furnished,595000
+125,Boston,1560,3,1,1,semi-furnished,594300
+126,Boston,716,3,1,1,unfurnished,588000
+127,Denver,650,3,2,3,unfurnished,588000
+128,Seattle,550,3,1,3,furnished,587300
+129,Denver,1146,3,1,3,semi-furnished,587300
+130,New York,480,3,1,1,unfurnished,586600
+131,Denver,582.8,4,1,4,semi-furnished,581000
+132,New York,520,3,1,3,semi-furnished,581000
+133,Boston,480,3,1,3,unfurnished,581000
+134,New York,700,3,1,1,semi-furnished,580300
+135,Denver,600,3,2,4,unfurnished,577500
+136,Boston,540,4,2,2,unfurnished,574000
+137,Seattle,464,4,1,2,semi-furnished,574000
+138,Boston,500,3,1,3,semi-furnished,574000
+139,Boston,636,3,1,1,furnished,574000
+140,Denver,580,3,2,4,unfurnished,574000
+141,Seattle,666,4,2,2,semi-furnished,565250
+142,New York,1050,4,2,2,semi-furnished,560000
+143,Seattle,480,5,2,3,unfurnished,560000
+144,Boston,470,4,1,2,furnished,560000
+145,Denver,500,3,1,4,furnished,560000
+146,Seattle,1050,2,1,1,semi-furnished,560000
+147,Boston,550,3,2,2,semi-furnished,560000
+148,Chicago,636,3,1,3,semi-furnished,560000
+149,New York,660,4,2,1,semi-furnished,560000
+150,New York,513.6,3,1,2,unfurnished,560000
+151,Chicago,440,4,1,2,semi-furnished,556500
+152,Seattle,540,5,1,2,furnished,556500
+153,Denver,330,3,3,2,semi-furnished,553000
+154,Boston,365,3,2,2,semi-furnished,553000
+155,Denver,610,3,2,1,furnished,553000
+156,Denver,690,3,1,1,semi-furnished,552300
+157,Seattle,281.7,4,2,2,furnished,549500
+158,Seattle,798,3,1,1,semi-furnished,549500
+159,Seattle,315,3,2,1,furnished,546000
+160,New York,621,4,1,4,furnished,546000
+161,Denver,610,3,1,3,semi-furnished,546000
+162,New York,660,4,2,2,semi-furnished,546000
+163,Seattle,682.5,3,1,1,semi-furnished,542500
+164,New York,671,3,2,2,furnished,539000
+165,New York,645,3,2,1,unfurnished,538300
+166,Denver,780,3,1,1,unfurnished,532000
+167,New York,460,2,2,1,semi-furnished,528500
+168,Denver,426,4,1,2,furnished,525000
+169,Denver,654,4,2,2,semi-furnished,525000
+170,New York,550,3,2,1,semi-furnished,525000
+171,Denver,1026.9,3,1,1,semi-furnished,525000
+172,Denver,840,3,1,2,unfurnished,525000
+173,Seattle,530,4,2,1,unfurnished,525000
+174,New York,380,3,1,2,unfurnished,525000
+175,Seattle,980,4,2,2,semi-furnished,525000
+176,Boston,852,3,1,1,furnished,525000
+177,New York,605,3,1,1,semi-furnished,524300
+178,Seattle,708.5,3,1,1,semi-furnished,522900
+179,Seattle,318,3,2,2,semi-furnished,521500
+180,New York,450,4,2,1,semi-furnished,521500
+181,Chicago,720,3,1,2,furnished,521500
+182,Seattle,341,3,1,2,semi-furnished,514500
+183,Seattle,798,3,1,1,semi-furnished,514500
+184,Boston,300,3,2,2,furnished,511000
+185,Seattle,300,3,1,2,unfurnished,511000
+186,New York,1141,2,1,2,furnished,511000
+187,New York,610,3,1,1,semi-furnished,511000
+188,Seattle,572,2,1,2,unfurnished,507500
+189,Denver,354,2,1,1,semi-furnished,504000
+190,Denver,760,4,1,2,furnished,504000
+191,Seattle,1070,3,1,2,semi-furnished,504000
+192,Seattle,660,3,1,1,furnished,504000
+193,Denver,480,2,1,1,semi-furnished,503300
+194,Seattle,815,3,2,1,semi-furnished,500500
+195,Boston,441,4,3,2,semi-furnished,497000
+196,Seattle,768.6,3,1,1,semi-furnished,497000
+197,Chicago,280,3,2,2,semi-furnished,495600
+198,Denver,594.8,3,1,2,semi-furnished,493500
+199,Boston,420,3,1,2,furnished,490700
+200,Seattle,452,3,1,2,semi-furnished,490000
+201,Denver,409.5,3,1,2,semi-furnished,490000
+202,New York,412,2,1,1,semi-furnished,490000
+203,Seattle,540,4,1,2,semi-furnished,490000
+204,Seattle,477,3,1,1,semi-furnished,490000
+205,New York,630,3,1,1,semi-furnished,490000
+206,Denver,580,2,1,1,semi-furnished,490000
+207,Denver,300,3,1,2,semi-furnished,490000
+208,Boston,297,3,1,3,semi-furnished,490000
+209,Boston,672,3,1,1,unfurnished,490000
+210,Chicago,464.6,3,1,2,semi-furnished,490000
+211,Seattle,1290,3,1,1,furnished,490000
+212,New York,342,4,2,2,semi-furnished,489300
+213,Seattle,499.5,4,2,1,semi-furnished,489300
+214,Denver,435,2,1,1,unfurnished,486500
+215,New York,416,3,1,3,unfurnished,483000
+216,Boston,604,3,1,1,semi-furnished,483000
+217,Boston,686.2,3,1,2,furnished,483000
+218,Boston,481.5,2,1,1,semi-furnished,483000
+219,Boston,700,3,1,2,unfurnished,479500
+220,New York,810,4,1,4,semi-furnished,479500
+221,Boston,342,4,2,2,semi-furnished,476700
+222,Seattle,916.6,2,1,1,semi-furnished,476000
+223,New York,632.1,3,1,2,furnished,476000
+224,New York,1024,2,1,1,unfurnished,476000
+225,Boston,644,2,1,1,semi-furnished,475300
+226,New York,517,3,1,4,semi-furnished,469000
+227,New York,600,2,1,1,furnished,469000
+228,Denver,363,3,1,2,semi-furnished,469000
+229,Denver,966.7,4,2,2,semi-furnished,469000
+230,Denver,540,2,1,2,semi-furnished,469000
+231,New York,432,3,1,1,semi-furnished,469000
+232,Seattle,374.5,3,1,2,furnished,465500
+233,Seattle,416,3,1,1,unfurnished,462000
+234,New York,388,3,2,2,semi-furnished,462000
+235,New York,568,3,1,2,semi-furnished,462000
+236,Boston,287,2,1,2,semi-furnished,462000
+237,Denver,501,3,1,2,semi-furnished,462000
+238,Denver,451,4,2,2,semi-furnished,461300
+239,New York,400,3,1,2,furnished,458500
+240,Boston,384,3,1,2,semi-furnished,458500
+241,New York,376,3,1,1,semi-furnished,455000
+242,New York,364,3,1,2,furnished,455000
+243,Seattle,255,3,1,2,furnished,455000
+244,Boston,532,3,1,2,semi-furnished,455000
+245,Chicago,536,3,1,2,unfurnished,455000
+246,New York,352,3,1,1,semi-furnished,455000
+247,Denver,840,4,1,4,unfurnished,455000
+248,Chicago,410,2,2,1,semi-furnished,454300
+249,Boston,499,4,2,2,furnished,454300
+250,Seattle,351,3,1,3,semi-furnished,451500
+251,New York,345,3,1,2,semi-furnished,451500
+252,Seattle,986,3,1,1,semi-furnished,451500
+253,New York,352,2,1,2,furnished,451500
+254,Denver,451,4,1,2,semi-furnished,448000
+255,Denver,588.5,2,1,1,unfurnished,448000
+256,New York,400,3,1,2,furnished,448000
+257,Seattle,825,3,1,1,furnished,448000
+258,Seattle,404,3,1,2,semi-furnished,448000
+259,Denver,636,2,1,1,furnished,447300
+260,New York,316.2,3,1,2,furnished,447300
+261,Boston,351,3,1,2,semi-furnished,447300
+262,Boston,375,2,1,1,semi-furnished,444500
+263,Denver,396.8,3,1,2,semi-furnished,441000
+264,Denver,490,2,1,2,semi-furnished,441000
+265,Chicago,288,3,1,2,semi-furnished,440300
+266,New York,488,3,1,1,unfurnished,440300
+267,Seattle,492,3,1,2,semi-furnished,440300
+268,Denver,495,4,1,2,semi-furnished,438200
+269,New York,390,3,1,2,unfurnished,437500
+270,Seattle,450,3,2,3,furnished,434000
+271,New York,190.5,5,1,2,semi-furnished,434000
+272,New York,407.5,3,1,1,semi-furnished,434000
+273,New York,350,4,1,2,furnished,434000
+274,Boston,645,4,1,2,semi-furnished,434000
+275,Denver,403.2,2,1,1,furnished,431900
+276,New York,440,2,1,1,semi-furnished,430500
+277,Seattle,1036,2,1,1,semi-furnished,430500
+278,New York,340,3,1,2,semi-furnished,427700
+279,New York,636,2,1,1,furnished,427000
+280,Seattle,636,2,1,2,unfurnished,427000
+281,Seattle,450,2,1,1,furnished,427000
+282,Boston,217.5,3,1,2,unfurnished,427000
+283,New York,436,4,1,2,furnished,427000
+284,Chicago,777,2,1,1,furnished,427000
+285,New York,665,3,1,2,semi-furnished,423500
+286,Boston,278.7,3,1,1,furnished,423500
+287,Denver,550,3,1,2,unfurnished,420000
+288,Seattle,504,3,1,2,unfurnished,420000
+289,Denver,585,2,1,1,semi-furnished,420000
+290,Chicago,261,4,3,2,semi-furnished,420000
+291,Chicago,295.3,3,1,2,unfurnished,420000
+292,New York,274.7,4,2,2,semi-furnished,420000
+293,Seattle,441,2,1,1,unfurnished,420000
+294,Chicago,400,4,2,2,semi-furnished,420000
+295,Denver,232.5,3,1,2,semi-furnished,420000
+296,Chicago,460,3,2,2,semi-furnished,420000
+297,Seattle,364,3,2,2,unfurnished,420000
+298,Chicago,580,3,1,1,semi-furnished,420000
+299,Seattle,700,3,1,1,furnished,420000
+300,New York,407.9,3,1,3,semi-furnished,420000
+301,Boston,352,3,1,2,semi-furnished,420000
+302,Boston,214.5,3,1,3,unfurnished,420000
+303,New York,450,3,1,1,furnished,420000
+304,Seattle,825,3,1,1,semi-furnished,419300
+305,New York,345,3,1,2,semi-furnished,419300
+306,Denver,484,3,1,2,semi-furnished,416500
+307,Boston,408,3,1,2,semi-furnished,416500
+308,Boston,404.6,3,1,2,semi-furnished,416500
+309,Boston,463.2,4,1,2,semi-furnished,413000
+310,Chicago,598.5,3,1,1,semi-furnished,413000
+311,Chicago,606,2,1,1,semi-furnished,412300
+312,New York,360,3,1,1,furnished,409850
+313,New York,368,3,2,2,semi-furnished,409500
+314,Denver,404,2,1,2,semi-furnished,409500
+315,Denver,560,2,1,1,semi-furnished,409500
+316,Denver,590,4,2,2,unfurnished,406000
+317,Chicago,499.2,3,2,2,unfurnished,406000
+318,Denver,434,3,1,1,semi-furnished,406000
+319,Boston,300,4,1,3,semi-furnished,406000
+320,New York,432,3,1,2,furnished,406000
+321,Chicago,363,3,2,2,semi-furnished,402500
+322,Boston,346,3,2,1,furnished,402500
+323,New York,540,3,1,1,semi-furnished,402500
+324,Denver,450,3,1,2,semi-furnished,400750
+325,Denver,346,4,1,2,semi-furnished,400750
+326,Seattle,410,4,1,1,unfurnished,399000
+327,New York,648,3,1,2,semi-furnished,399000
+328,Boston,450,3,2,2,semi-furnished,399000
+329,Boston,396,3,1,2,furnished,399000
+330,Chicago,405,2,1,2,unfurnished,399000
+331,Denver,726,3,2,1,furnished,392000
+332,New York,550,4,1,2,semi-furnished,392000
+333,Boston,300,3,1,2,semi-furnished,392000
+334,Chicago,329,2,1,1,furnished,392000
+335,Chicago,381.6,2,1,1,furnished,392000
+336,Chicago,808,3,1,1,semi-furnished,392000
+337,Seattle,214.5,4,2,1,unfurnished,392000
+338,New York,378,2,1,2,semi-furnished,388500
+339,Seattle,318,4,2,2,furnished,388500
+340,Boston,530,5,2,2,semi-furnished,385000
+341,Denver,318,2,2,1,semi-furnished,385000
+342,Boston,715.2,3,1,2,furnished,385000
+343,Boston,408,2,1,1,semi-furnished,385000
+344,New York,385,2,1,1,semi-furnished,385000
+345,Seattle,201.5,3,1,2,semi-furnished,385000
+346,New York,217.6,2,1,2,semi-furnished,385000
+347,New York,335,3,1,2,unfurnished,383600
+348,Boston,315,2,2,1,semi-furnished,381500
+349,New York,482,3,1,2,semi-furnished,378000
+350,Seattle,342,2,1,2,semi-furnished,378000
+351,New York,360,2,1,1,semi-furnished,378000
+352,Seattle,583,2,1,1,unfurnished,378000
+353,New York,285.6,3,1,3,furnished,378000
+354,Denver,840,2,1,1,furnished,378000
+355,Chicago,825,3,1,1,furnished,377300
+356,Seattle,252,5,2,1,furnished,377300
+357,Seattle,693,4,1,2,furnished,377300
+358,Seattle,348,2,1,1,semi-furnished,374500
+359,Chicago,360,3,1,1,unfurnished,371000
+360,Boston,404,2,1,1,semi-furnished,371000
+361,Denver,602,3,1,1,semi-furnished,371000
+362,New York,405,2,1,1,furnished,371000
+363,Boston,358.4,2,1,1,semi-furnished,371000
+364,New York,312,3,1,2,semi-furnished,370300
+365,Seattle,545,2,1,1,furnished,370300
+366,Seattle,363,2,1,1,furnished,367500
+367,Seattle,363,2,1,1,unfurnished,367500
+368,New York,564,2,1,1,semi-furnished,367500
+369,Boston,360,2,1,1,furnished,367500
+370,Seattle,428,2,1,1,semi-furnished,364000
+371,New York,357,3,1,2,semi-furnished,364000
+372,Boston,318,3,1,2,semi-furnished,364000
+373,New York,300,2,1,2,furnished,364000
+374,Seattle,352,2,2,1,semi-furnished,364000
+375,Denver,596,3,1,2,unfurnished,364000
+376,Chicago,413,3,2,2,semi-furnished,364000
+377,Boston,285,3,2,2,unfurnished,364000
+378,New York,227.5,3,1,3,semi-furnished,364000
+379,New York,352,3,1,1,unfurnished,363300
+380,Seattle,450,2,1,1,semi-furnished,360500
+381,Denver,400,2,1,1,semi-furnished,360500
+382,New York,315,3,1,2,furnished,357000
+383,Denver,450,4,2,2,furnished,357000
+384,Seattle,450,2,1,1,furnished,357000
+385,Denver,364,2,1,1,unfurnished,357000
+386,Seattle,385,3,1,1,unfurnished,353500
+387,New York,424,3,1,2,semi-furnished,350000
+388,Denver,365,3,1,2,unfurnished,350000
+389,Seattle,460,4,1,2,semi-furnished,350000
+390,Seattle,213.5,3,2,2,unfurnished,350000
+391,Boston,303.6,3,1,2,semi-furnished,350000
+392,New York,399,3,1,2,semi-furnished,350000
+393,Denver,742.4,3,1,1,unfurnished,350000
+394,Seattle,348,3,1,1,unfurnished,350000
+395,New York,360,6,1,2,unfurnished,350000
+396,Boston,364,2,1,1,semi-furnished,350000
+397,Boston,590,2,1,1,furnished,350000
+398,New York,312,3,1,2,unfurnished,350000
+399,New York,735,2,1,1,semi-furnished,350000
+400,Seattle,351.2,2,1,1,unfurnished,350000
+401,Seattle,950,3,1,2,unfurnished,350000
+402,Denver,588,2,1,1,unfurnished,350000
+403,Boston,1294.4,3,1,1,unfurnished,350000
+404,Boston,490,3,1,2,unfurnished,349300
+405,Boston,306,3,1,1,unfurnished,346500
+406,Chicago,532,2,1,1,unfurnished,346500
+407,Seattle,214.5,3,1,3,furnished,346500
+408,New York,400,2,1,1,unfurnished,343000
+409,Seattle,318.5,2,1,1,unfurnished,343000
+410,Seattle,385,3,1,1,unfurnished,343000
+411,Chicago,214.5,3,1,3,furnished,343000
+412,Boston,261,3,1,2,unfurnished,343000
+413,New York,195,3,2,2,unfurnished,343000
+414,New York,404,2,1,1,unfurnished,342300
+415,New York,478.5,3,1,2,furnished,339500
+416,New York,345,3,1,1,unfurnished,339500
+417,New York,364,2,1,1,furnished,339500
+418,Seattle,350,4,1,2,unfurnished,336000
+419,New York,496,4,1,3,semi-furnished,336000
+420,Seattle,412,2,1,2,unfurnished,336000
+421,Chicago,475,2,1,1,unfurnished,336000
+422,Seattle,372,2,1,1,unfurnished,336000
+423,Seattle,375,3,1,1,unfurnished,336000
+424,New York,310,3,1,2,semi-furnished,336000
+425,Boston,318.5,2,1,1,furnished,336000
+426,New York,270,3,1,1,furnished,335300
+427,Denver,214.5,3,1,2,furnished,333200
+428,Boston,404,2,1,1,unfurnished,332500
+429,New York,477.5,4,1,2,unfurnished,332500
+430,Boston,250,2,1,1,unfurnished,329000
+431,New York,318,4,1,2,unfurnished,329000
+432,Seattle,606,3,1,1,furnished,329000
+433,New York,348,4,1,2,semi-furnished,329000
+434,Denver,379.2,4,1,2,semi-furnished,329000
+435,New York,404,2,1,1,unfurnished,329000
+436,Boston,214.5,3,1,2,furnished,329000
+437,New York,588,3,1,1,unfurnished,329000
+438,Seattle,450,2,1,1,semi-furnished,325500
+439,Seattle,393,2,1,1,unfurnished,325500
+440,Denver,364,4,1,2,unfurnished,323400
+441,Chicago,437,3,1,2,unfurnished,322000
+442,New York,268.4,2,1,1,unfurnished,322000
+443,Boston,432,3,1,1,unfurnished,322000
+444,New York,312,3,1,2,furnished,322000
+445,Boston,345,1,1,1,furnished,315000
+446,Chicago,398.6,2,2,1,unfurnished,315000
+447,New York,350,2,1,1,semi-furnished,315000
+448,New York,409.5,2,1,1,semi-furnished,315000
+449,Boston,165,3,1,2,unfurnished,315000
+450,New York,345,3,1,2,semi-furnished,315000
+451,Seattle,675,2,1,1,semi-furnished,315000
+452,Boston,900,3,1,2,semi-furnished,315000
+453,Chicago,306.9,2,1,1,unfurnished,315000
+454,Seattle,450,3,1,2,unfurnished,314300
+455,New York,549.5,3,1,1,unfurnished,312900
+456,New York,239.8,3,1,1,semi-furnished,311885
+457,New York,300,3,1,1,unfurnished,311500
+458,New York,385,3,1,2,unfurnished,311500
+459,Boston,350,2,1,1,unfurnished,311500
+460,Seattle,810,2,1,1,unfurnished,308700
+461,Boston,496,2,1,1,unfurnished,308000
+462,Seattle,216,3,1,2,semi-furnished,308000
+463,Seattle,309,2,1,1,unfurnished,308000
+464,Seattle,450,2,1,2,semi-furnished,308000
+465,New York,380,2,1,1,unfurnished,304500
+466,Boston,309,3,1,2,semi-furnished,301000
+467,Seattle,324,3,1,2,semi-furnished,301000
+468,Seattle,283.5,2,1,1,semi-furnished,301000
+469,Seattle,460,2,1,1,furnished,301000
+470,Seattle,507.6,3,1,1,unfurnished,301000
+471,Seattle,375,3,1,2,unfurnished,301000
+472,Boston,363,4,1,2,semi-furnished,301000
+473,Seattle,805,2,1,1,unfurnished,300300
+474,Denver,435.2,4,1,2,unfurnished,297500
+475,New York,300,2,1,2,semi-furnished,296100
+476,New York,585,3,1,2,unfurnished,294000
+477,New York,496,2,1,1,unfurnished,294000
+478,New York,360,3,1,2,unfurnished,294000
+479,Seattle,366,4,1,2,unfurnished,294000
+480,Denver,348,3,1,2,semi-furnished,294000
+481,Chicago,270,2,1,1,furnished,294000
+482,Chicago,315,3,1,2,unfurnished,294000
+483,New York,661.5,3,1,2,semi-furnished,294000
+484,New York,304,2,1,1,unfurnished,287000
+485,Seattle,363,2,1,1,unfurnished,287000
+486,Seattle,600,2,1,1,semi-furnished,287000
+487,Seattle,540,4,1,2,unfurnished,287000
+488,Chicago,520,4,1,3,unfurnished,285250
+489,Boston,330,3,1,2,semi-furnished,283500
+490,Denver,435,3,1,2,unfurnished,283500
+491,Seattle,264,2,1,1,furnished,283500
+492,Seattle,265,3,1,2,unfurnished,280000
+493,New York,396,3,1,1,furnished,280000
+494,Boston,680,2,1,1,unfurnished,273000
+495,New York,400,3,1,2,unfurnished,273000
+496,New York,400,2,1,1,unfurnished,269500
+497,New York,393.4,2,1,1,unfurnished,266000
+498,Boston,200,2,1,2,semi-furnished,266000
+499,Seattle,363,3,3,2,unfurnished,266000
+500,New York,280,3,1,1,unfurnished,266000
+501,Seattle,243,3,1,1,unfurnished,266000
+502,Seattle,348,2,1,1,semi-furnished,266000
+503,Denver,400,3,1,1,semi-furnished,266000
+504,Boston,318.5,2,1,1,unfurnished,265300
+505,Boston,400,3,1,2,unfurnished,265300
+506,Seattle,291,2,1,1,unfurnished,260400
+507,Seattle,360,2,1,1,unfurnished,259000
+508,New York,440,2,1,1,unfurnished,259000
+509,Denver,360,2,2,2,furnished,259000
+510,Seattle,288,3,1,1,unfurnished,252000
+511,New York,318,3,1,1,unfurnished,252000
+512,Boston,300,2,1,2,furnished,252000
+513,Denver,440,3,1,2,unfurnished,248500
+514,Seattle,300,3,1,2,semi-furnished,248500
+515,New York,321,3,1,2,unfurnished,245000
+516,Boston,324,2,1,1,unfurnished,245000
+517,Denver,300,2,1,1,unfurnished,245000
+518,Chicago,350,2,1,1,unfurnished,245000
+519,Boston,484,2,1,2,unfurnished,245000
+520,Chicago,770,2,1,1,unfurnished,245000
+521,Chicago,363.5,2,1,1,unfurnished,240800
+522,New York,247.5,3,1,2,furnished,238000
+523,Seattle,278.7,4,2,2,furnished,238000
+524,Boston,326.4,2,1,1,unfurnished,238000
+525,Chicago,364,2,1,1,unfurnished,234500
+526,Seattle,318,2,1,1,unfurnished,231000
+527,Seattle,183.6,2,1,1,semi-furnished,227500
+528,Chicago,397,1,1,1,unfurnished,227500
+529,Denver,397,3,1,2,unfurnished,227500
+530,Denver,195,3,1,1,unfurnished,224000
+531,New York,530,3,1,1,unfurnished,223300
+532,Boston,300,2,1,1,unfurnished,213500
+533,New York,240,3,1,2,unfurnished,210000
+534,New York,300,4,1,2,unfurnished,210000
+535,Boston,336,2,1,1,unfurnished,210000
+536,Boston,342,5,1,2,unfurnished,196000
+537,New York,170,3,1,2,unfurnished,189000
+538,New York,364.9,2,1,1,unfurnished,189000
+539,Seattle,299,2,1,1,unfurnished,185500
+540,Seattle,300,2,1,1,unfurnished,182000
+541,New York,240,3,1,1,semi-furnished,176715
+542,Boston,362,2,1,1,unfurnished,175000
+543,Seattle,291,3,1,1,furnished,175000
+544,Chicago,385,3,1,2,unfurnished,175000
