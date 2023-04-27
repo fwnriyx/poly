@@ -1,4 +1,4 @@
-In this project, I worked with datasets about Singapore's Land public transport.
+In this project, I worked with datasets about Singapore's Land public transport. My first objective was to find out which operator has the best service by the percentage of buses owned by the different operators in Singapore, distance covered, time operated as well as the efficiency of the buses. Next, I wanted to find out whether the MRT is a better mode of transport than the MRT, by looking at the amount of ridership, fares as well as the change in trend over the years.
 
 Firstly, I used pandas in order to wrangle and cleanse my data for it to be usable to plot later on. I used functions such as merge, pivot table, replace as well as fillna in order to wrangle and cleanse the data. This is a strong example:
 
