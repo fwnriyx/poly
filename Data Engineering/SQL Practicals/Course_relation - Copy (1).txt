@@ -1,0 +1,6 @@
+'DBA','Diploma in Business Administration','SB',500.00
+'DBIT','Diploma in Business and Information Technology','DMIT',700.00,100.00
+'DDM','Diploma in Digital Media','DMIT',1000.00,900.00
+'DFI','Diploma in Financial Informatics','SB',800.00
+'DISM','Diploma in Infocomm Security Management','DMIT',900.00,300.00
+'DIT','Diploma in Information Technology','DMIT',650.00,450.00
