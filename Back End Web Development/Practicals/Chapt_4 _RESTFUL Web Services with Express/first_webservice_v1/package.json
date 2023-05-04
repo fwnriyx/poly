@@ -1,0 +1,20 @@
+{
+  "name": "first_webservice",
+  "version": "1.0.0",
+  "description": "Webservices first attempt: GET and POST",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GET",
+    "POST",
+    "Express",
+    "nodejs"
+  ],
+  "author": "p2222811",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

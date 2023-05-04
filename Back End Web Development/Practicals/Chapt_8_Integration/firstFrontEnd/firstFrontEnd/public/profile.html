@@ -1,0 +1,89 @@
+﻿<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/profile.css" rel="stylesheet" />
+    <Title>User Profile</Title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#Update").click(function () {
+                var tmpUName = $('#username').val();
+                var tmpEmail = $('#email').val();
+                var tmpRole = $('#role').val();
+                var tmpToken = localStorage.getItem('token');
+
+                var data = "{\"username\":\"" + tmpUName + "\", \"email\":\"" + tmpEmail + "\", \"role\":\"" + tmpRole + "\", \"password\":\"" + tmpPwd + "\"}";
+                $.ajax({
+                    headers: { 'authorization': 'Bearer ' + tmpToken },
+                    url: 'http://localhost:8081/user',
+                    type: 'PUT',
+                    data: data,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    success: function (data, textStatus, xhr) {
+                        if (data != null && data.success) {
+
+                            $('#msg').html('Record updated successfully!');
+
+                        } else {
+                            console.log("Error");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        console.log('Error in Operation');
+                    }
+                });
+            });
+
+            $("#Logout").click(function () {
+                window.localStorage.clear();
+                window.location.assign("http://localhost:3001/login.html");
+            });
+        });  
+    </script>
+
+</head>
+
+<body>
+    <div class="card">
+        <img src="http://localhost:8081/image/pic.jpg" id="profilepic" alt="Profile" style="width:100%">
+        <p class="username"> <label>Username: </label>
+            <input type="text" id="username"> </br>
+        </p>
+        <p class="role"><label>Job role: </label>
+            <input type="text" id="role"> </br>
+        </p>
+        <p class="email"><label>Email: </label>
+            <input type="text" id="email">
+        </p>
+        <p><span id="msg"></span></p>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p><input type="button" id="Update" value="Update Profile" /></p>
+        <p><input type="button" id="Logout" value="Log Out" /></p>
+    </div>
+    <script>
+        var userData = localStorage.getItem('userInfo');
+        var userJsonData = JSON.parse(userData);
+        var username = userJsonData[0].username;
+        var useremail = userJsonData[0].email;
+        var userrole = userJsonData[0].role;
+        // var userpic = userJsonData[0].pic;
+        var userpic = userJsonData[0].profile_pic_url;
+        document.getElementById("username").value = username; 
+        document.getElementById("email").value = useremail; 
+        document.getElementById("role").value = userrole; 
+       document.getElementById("profilepic").src = "http://localhost:8081/image/"+userpic;
+    </script>
+
+
+</body>
+
+</html>

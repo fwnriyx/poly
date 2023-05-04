@@ -1,0 +1,20 @@
+{
+  "name": "friendbook-client",
+  "version": "1.0.0",
+  "description": "FrontEnd Server for enduser with scripts to access BackEnd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "FrontEnd",
+    "Express",
+    "HTML",
+    "JS"
+  ],
+  "author": "yong_choon_fon@ichat.sp.edu.sg",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

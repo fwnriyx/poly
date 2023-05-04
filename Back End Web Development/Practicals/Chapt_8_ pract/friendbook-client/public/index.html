@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friendbook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="nav" id="navBar">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/users/">All Users</a>
+        </nav>
+    
+        <div class=row style="margin-top: 2rem;">
+            <div class="col-md-8 col-xs-12">
+                <h1>Home</h1>
+
+                <form id="create-post-form" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <textarea class="form-control" id="create-post-form-body" rows="3" placeholder="What's on your mind?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Post</button>
+                </form>
+
+                <div id="posts">
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12">
+                <h2>Friends</h2>
+                <ul id="friends-list" class="item-group" style="list-style: none; padding-left: 0;">
+                </ul>
+            </div>
+    
+
+        </div>
+
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script>
+        // your JS code goes here.
+        // API url
+        const baseUrl = "http://localhost:3000";
+        // hardcoded because we have not added login yet.
+        // const loggedInUserID = 3;
+
+        const token = localStorage.getItem("token");
+        const loggedInUserID = parseInt(localStorage.getItem("loggedInUserID"));
+
+        if (token === null || isNaN(loggedInUserID)) {
+            window.location.href = "/login/";
+        } else {
+            // put your original code in the script tag here
+
+            $("#navBar").append(`<a class="nav-link" href='javascript:window.localStorage.clear();window.location.href = "/"'>Logout</a>`);
+
+            axios.get(`${baseUrl}/users/${loggedInUserID}/posts/`, {headers: {
+                "Authorization": "Bearer " + token}
+            })
+            .then((response) => {
+                const posts = response.data;
+                posts.forEach((post) => {
+                    const postHtml = `
+                    <div class="card" style="margin-top: 2rem;">
+                        <div class="card-body">
+                            <p class="card-text">${post.text_body}</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            ${post.created_at}
+                        </div>
+                    </div>
+                    `;
+                    
+                    $("#posts").append(postHtml);
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        }
+
+
+        $("#create-post-form").submit((event) => {
+        // prevents the page from refreshing
+            event.preventDefault();
+
+            const requestBody = {
+                text_body: $("#create-post-form-body").val(),
+            };
+
+            // create the post
+            axios.post(`${baseUrl}/posts/`, requestBody, {headers: {
+                "Authorization": "Bearer " + token}})
+            .then((response) => {
+                // reset form value.
+                $("#create-post-form-body").val("");
+
+                // fetch the post with the returned postID
+                axios.get(`${baseUrl}/posts/${response.data.postID}`)
+                .then((response) => {
+                    const post = response.data;
+                    const postHtml = `
+                    <div class="card" style="margin-top: 2rem;">
+                        <div class="card-body">
+                            <p class="card-text">${post.text_body}</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            ${post.created_at}
+                        </div>
+                    </div>
+                    `;
+                    $("#posts").prepend(postHtml);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        });
+
+        // fetch user's friends
+        axios.get(`${baseUrl}/users/${loggedInUserID}/friends/`, {headers: {
+            "Authorization": "Bearer " + token}
+        })
+        .then((response) => {
+            const friends = response.data;
+            friends.forEach((friend) => {
+                $("#friends-list").append(`
+                <li class="list-group-item">
+                    <a href="/users/${friend.id}">${friend.full_name}<a/>
+                </li>
+                `);
+            });
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+
+    </script>
+
+</body>
+</html>

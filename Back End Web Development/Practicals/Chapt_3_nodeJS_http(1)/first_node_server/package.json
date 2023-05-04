@@ -1,0 +1,18 @@
+{
+  "name": "first_node_server",
+  "version": "1.0.0",
+  "description": "nodejs http server first attempt",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "http",
+    "path",
+    "fs",
+    "GET"
+  ],
+  "author": "2222811",
+  "license": "ISC"
+}

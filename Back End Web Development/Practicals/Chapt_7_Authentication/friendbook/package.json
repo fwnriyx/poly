@@ -1,0 +1,16 @@
+{
+  "name": "friendbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "srever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yong_choon_fon@ichat.sp.edu.sg",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1"
+  }
+}
