@@ -1,4 +1,6 @@
-def textEncDec(text, shift):
+file = None
+
+def textEncDec(file, text, shift):
     print(text)
     result = ""
     for i in range(len(text)):
