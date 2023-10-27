@@ -1,0 +1,213 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Phone&Sequence_7",
+        "Job_title&Sequence_7",
+        "Email&Sequence_7",
+        "Name&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.21.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "iteration&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.3.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Feedback&Flowchart_1",
+        "Count&Flowchart_1",
+        "Name&Sequence_5",
+        "Email&Sequence_5",
+        "Job_title&Sequence_5",
+        "Phone&Sequence_5",
+        "Count&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.4.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Feedback&Sequence_4",
+        "Name&Sequence_4",
+        "Email&Sequence_4",
+        "Job_title&Sequence_4",
+        "Phone&Sequence_4",
+        "Count&Flowchart_1",
+        "Count&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.5.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Count&Flowchart_1",
+        "Name&Flowchart_1",
+        "Email&Sequence_13",
+        "Job_title&Sequence_13",
+        "Phone&Sequence_13",
+        "Feedback&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.4switch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Count&Flowchart_1",
+        "Count&Sequence_1",
+        "Name&Sequence_4",
+        "Email&Sequence_4",
+        "Job_title&Sequence_4",
+        "Phone&Sequence_4",
+        "Feedback&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.5switch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Count&Flowchart_1",
+        "Name&Flowchart_1",
+        "Email&Sequence_13",
+        "Job_title&Sequence_13",
+        "Phone&Sequence_13",
+        "Feedback&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex5.6.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Feedback&Sequence_2",
+        "Phone&Sequence_2",
+        "Job&Sequence_2",
+        "Email&Sequence_2",
+        "Name&Sequence_2",
+        "DataTable1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex6.1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Phone_no&Sequence_2",
+        "Birthdate&Sequence_2",
+        "Name&Sequence_2",
+        "Record&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex6.2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Phone&Sequence_2",
+        "DataTable1&Flowchart_1",
+        "Record&Flowchart_1",
+        "Name&Sequence_2",
+        "Birthdate&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex8.1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DataTable1&Sequence_1",
+        "Name&Sequence_3",
+        "Email&Sequence_3",
+        "Job&Sequence_3",
+        "Phone&Sequence_3",
+        "Feedback&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex8.2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DataTable1&Sequence_1",
+        "Name&Sequence_3",
+        "Email&Sequence_3",
+        "Job&Sequence_3",
+        "Phone&Sequence_3",
+        "Feedback&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex9.1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SalesByTeamTable&Flowchart_1",
+        "SalesTeamTable&Flowchart_1",
+        "SalesTable&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

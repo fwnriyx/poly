@@ -1,0 +1,93 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "10.1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "All_Text&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10.2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "All_Lines&Flowchart_1",
+        "All_Text&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10.3.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Seller&Flowchart_1",
+        "All_Text&Flowchart_1",
+        "All_Lines&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10.4.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "All_Text_Starting_From_Keyword&Flowchart_1",
+        "All_Lines_Starting_From_Keyword&Flowchart_1",
+        "Keyword_Start_Position&Flowchart_1",
+        "Bill_To&Flowchart_1",
+        "All_Text&Flowchart_1",
+        "All_Lines&Flowchart_1",
+        "Seller&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10.5.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Keyword&Flowchart_1",
+        "All_Text_After_Keyword&Flowchart_1",
+        "All_Lines_After_Keyword&Flowchart_1",
+        "Due_Date&Flowchart_1",
+        "Amt_Due&Flowchart_1",
+        "Invoice_Purpose&Flowchart_1",
+        "Invoice_Ref&Flowchart_1",
+        "Invoice_Date&Flowchart_1",
+        "All_Text&Flowchart_1",
+        "All_Lines&Flowchart_1",
+        "Seller&Flowchart_1",
+        "Bill_To&Flowchart_1",
+        "Keyword_Start_Position&Flowchart_1",
+        "All_Lines_Starting_From_Keyword&Flowchart_1",
+        "All_Text_Starting_From_Keyword&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

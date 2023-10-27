@@ -1,0 +1,69 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex1.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Total_Amount&Sequence_1",
+        "Total_Days&Sequence_1",
+        "Project_ID&Sequence_1",
+        "All_Text&Sequence_1",
+        "Keyword&Sequence_1",
+        "All_Text_After_Keyword&Sequence_1",
+        "All_Lines_After_Keyword&Sequence_1",
+        "Consultant_ID&Sequence_1",
+        "All_Lines&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex3.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FinalExpenses&Flowchart_1",
+        "Expenses&Flowchart_1",
+        "ExpenseCumQTD&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "All_Lines&Sequence_20",
+        "Consultant_ID&Sequence_20",
+        "All_Lines_After_Keyword&Sequence_20",
+        "All_Text_After_Keyword&Sequence_20",
+        "Keyword&Sequence_20",
+        "Project_ID&Sequence_20",
+        "Total_Days&Sequence_20",
+        "Total_Amount&Sequence_20",
+        "All_Text&Sequence_19",
+        "FileList&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

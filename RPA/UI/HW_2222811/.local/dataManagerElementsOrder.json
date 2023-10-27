@@ -1,0 +1,77 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10a.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "test_str&Flowchart_1",
+        "int_count&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10b.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "test_str&Flowchart_1",
+        "int_count&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10c.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "test_str&Flowchart_1",
+        "int_count&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10d.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "test_str&Flowchart_1",
+        "int_count&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ex10e.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "all_numbers&Flowchart_1",
+        "comma_str&Flowchart_1",
+        "test_str&Flowchart_1",
+        "int_count&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
