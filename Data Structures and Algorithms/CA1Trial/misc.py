@@ -27,10 +27,11 @@ class misc:
         except ValueError:
             return False
 
-    def menu(self):
-        self.__print_self()
+    def menu(self): 
+        self.print_self()
         while True:
-            starting_choices = ['New', 'Open', 'Sort', 'Process Text', 'Text Summarization', 'Text Searching','Print', 'Save', 'Save as', 'Exit']
+            starting_choices = ['Encrypt/Decrypt Message', 'Encrypt/Decrypt File', 'Analysze letter frequency distribution', 'Infer caesar cipher key from file Text', 
+                                'Analyze, and sort encrypted files', 'Extra Option One','Extra Option Two', 'Exit']
             user_choice = Utils.get_number_choice(arr_choices=starting_choices)
             if user_choice == 1:
                 self.__choice1()
