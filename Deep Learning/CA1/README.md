@@ -9,6 +9,7 @@ In part 1:
         -Model architecture (Efficiency and effectiveness)
         -Generalization (prevent overfitting)
         -Regularization
+
 ```python
         
 ```
