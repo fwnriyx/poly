@@ -6,8 +6,8 @@ class Staff(Person):
     # override parent's constructor
     def __init__(self, ID, name, salary):
         self.__salary = salary
-        # invoke parent's constructor
-
+        super().__init__(ID, name)
+   
     def printMe(self):
         # can you replace the following 2 lines with one-line codes?
         print('== Information ==')
@@ -20,7 +20,7 @@ class Staff(Person):
         print('I am a staff')
 
 # testing
-#obj2 = Staff('ST02', 'Susan', 4000)
-#obj2.printMe()
-#obj2.whoAmI()
+# obj2 = Staff('ST02', 'Susan', 4000)
+# obj2.printMe()
+# obj2.whoAmI()
 
