@@ -1,6 +1,6 @@
 file = None
 
-class CaesarCipher(Text):
+class CaesarCipher:
     def __init__(self, shift,text):
         self.__shift = shift
         self.__text = text
@@ -13,10 +13,8 @@ class CaesarCipher(Text):
     When decrypted, the result is "The quick brown fox jumps over the lazy dog" and the shift is -3.
     This means that the given shift by the user is the shift used to encrypt the message, not the shift that the user wants to use to decrypt the message.
     '''
-    def textEncoder(file, text, shift):
-        print(text)
-        result = ""
-        for i in range(len(text)):
+    def textEncoder(self):
+        for i in range(len(self.__text)):
             char = text[i]
             if (char.isupper()):
                 '''

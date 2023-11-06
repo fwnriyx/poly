@@ -4,9 +4,14 @@ Class: DAAA/FT/2A/06
 Admin no: 2222811
 '''
 
+"""
+Why use @static methods?
+Static methods are used to group functions which have some logical connection with a class to the class. 
+"""
 
 class misc:
-
+    def __init__(self):
+        self.__choice = 0
     def boxbox(text):
         lines = text.split('\n')
         max_line_length = max(len(line) for line in lines) 
@@ -20,12 +25,13 @@ class misc:
         
         print('*' * box_width)
     
-    def numericalCheck(choice):
-        try:
-            int(choice)
-            return True
-        except ValueError:
-            return False
+    @staticmethod
+    def user_choice():
+        input("Press enter key, to continue....\n")
+        choice = input(f"Please select your choice: (1,2,3,4,5,6,7,8)")
+
+        return choice
+
 
     def menu(self): 
         self.print_self()
