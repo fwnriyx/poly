@@ -1,4 +1,4 @@
-file = None
+import os
 
 class CaesarCipher:
     def __init__(self, shift,text):
@@ -15,7 +15,7 @@ class CaesarCipher:
     '''
     def textEncoder(self):
         for i in range(len(self.__text)):
-            char = text[i]
+            char = self.__text[i]
             if (char.isupper()):
                 '''
                 Steps for positive shift: 
@@ -27,17 +27,38 @@ class CaesarCipher:
                     - for small number -97 (use ord(a) if no hardcode)
                 '''
                 #To de/encrypt text, shift by value and add to result mod 26 so that it doesnt go over 26 (for example Z +1 needs to go to A, not 27)
-                if(((ord(char) + shift - ord("A")) % 26) + ord("A")) < 0:
+                if(((ord(char) + self.__shift - ord("A")) % 26) + ord("A")) < 0:
                     #A = 65, negative shift 1, Need it to go to Z, start from the back (for back shifts that turn utf < 65 aka alphabet < 0) 
-                    result += chr(((ord(char) + shift - ord("A")) % 26) + ord("Z"))
+                    result += chr(((ord(char) + self.__shift - ord("A")) % 26) + ord("Z"))
                 else:
                     #Z = 90, positive shift 1, Need it to go to A, starting from the front (forward shift cases and back shift where the utf still > 65) 
-                    result += chr(((ord(char) + shift - ord("A")) % 26) + ord("A"))
+                    result += chr(((ord(char) + self.__shift - ord("A")) % 26) + ord("A"))
             elif (char.islower()):
-                if(((ord(char) + shift - 97) % 26) + 97) < 0:
-                    result += chr(((ord(char) + shift - ord("a")) % 26) + ord("z"))
+                if(((ord(char) + self.__shift - 97) % 26) + 97) < 0:
+                    result += chr(((ord(char) + self.__shift - ord("a")) % 26) + ord("z"))
                 else:
-                    result += chr(((ord(char) + shift - ord("a")) % 26) + ord("a"))
+                    result += chr(((ord(char) + self.__shift - ord("a")) % 26) + ord("a"))
             else:
-                result += char
+                result += char  
         return result
+
+class FileCaesarCipher(CaesarCipher):
+    def __init__(self, shift, file_path):
+        with open(file_path, 'r') as file:
+            text = file.read()
+        super().__init__(shift, text)
+        self.__file_path = file_path
+
+    def file_validation(self):
+        if not os.path.isfile(self.__file_path):
+            raise FileNotFoundError(f'File {self.__file_path} not found')
+
+    def encrypt_file(self):
+        encrypted_text = self.encrypt()
+        with open(self.__file_path, 'w') as file:
+            file.write(encrypted_text)
+
+    def decrypt_file(self):
+        decrypted_text = self.decrypt()
+        with open(self.__file_path, 'w') as file:
+            file.write(decrypted_text)
