@@ -10,9 +10,15 @@ Static methods are used to group functions which have some logical connection wi
 """
 
 class misc:
-    def __init__(self):
-        self.__choice = 0
+
     def boxbox(text):
+        text = """ST1507 DSAA: Welcome to:
+        ~Caesar Cipher Encrypted Message Analyzer~
+        ------------------------------------------
+
+        - Done by Fitri Amir (P2222811)
+        - Class DAAA/FT/2A/06
+        """
         lines = text.split('\n')
         max_line_length = max(len(line) for line in lines) 
         box_width = max_line_length + 4 
@@ -36,9 +42,9 @@ class misc:
     def menu(self): 
         self.print_self()
         while True:
-            starting_choices = ['Encrypt/Decrypt Message', 'Encrypt/Decrypt File', 'Analysze letter frequency distribution', 'Infer caesar cipher key from file Text', 
-                                'Analyze, and sort encrypted files', 'Extra Option One','Extra Option Two', 'Exit']
-            user_choice = Utils.get_number_choice(arr_choices=starting_choices)
+            menu = ['Encrypt/Decrypt Message', 'Encrypt/Decrypt File', 'Analysze letter frequency distribution', 'Infer caesar cipher key from file Text', 
+                    'Analyze, and sort encrypted files', 'Extra Option One','Extra Option Two', 'Exit']
+            user_choice = int(self.user_choice())
             if user_choice == 1:
                 self.__choice1()
             elif user_choice == 2:
@@ -60,3 +66,6 @@ class misc:
             elif user_choice == 10:
                 self.__choice10()
                 return
+    def __choice1(self):
+        from CaesarCipher import textEncoder
+

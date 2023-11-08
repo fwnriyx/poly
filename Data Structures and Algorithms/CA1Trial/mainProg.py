@@ -3,16 +3,7 @@
 from CaesarCipher import textEncDec
 from misc import boxbox
 
-text = """ST1507 DSAA: Welcome to:
-~Caesar Cipher Encrypted Message Analyzer~
-------------------------------------------
 
-- Done by Fitri Amir (P2222811)
-- Class DAAA/FT/2A/06
-"""
-
-boxbox(text)
-case = ""
 
 while case != 8:
     input("Press enter key, to continue....\n")
