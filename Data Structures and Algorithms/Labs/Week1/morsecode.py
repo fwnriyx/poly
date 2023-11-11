@@ -53,10 +53,10 @@ def fromMorse(morse_code):
     return decoded_text
 
 
-# morse = open("morse.txt", "r")
-# morse_code = morse.read()
-# print(toMorse(morse_code))
+morse = open("morse.txt", "r")
+morse_code = morse.read()
+print(toMorse(morse_code))
 
-# text = open("text.txt", "r")
-# text_code = text.read()
-# print(fromMorse(text_code)) 
+text = open("text.txt", "r")
+text_code = text.read()
+print(fromMorse(text_code)) 

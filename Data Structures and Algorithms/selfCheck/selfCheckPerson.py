@@ -6,33 +6,37 @@
 class Person:
     # constructor with 2 arguments
     def __init__(self, ID, name):
-        self.ID = ID   # promote class variable ID to private data
-        self.name = name  # promote class variable name to private data
+        self.__ID = ID   # promote class variable ID to private data
+        self.__name = name  # promote class variable name to private data
 
     def getID(self):
         # provide access function public getter for ID
         # for indirect access to private class variables outside the class
+        return self.__ID
 
     def getName(self):
         # provide access function public getter for name
+        return self.__name
 
     def setID(self, newID):
         # provide access function public setter for ID
+        self.__ID = newID
 
     def setName(self, newName):
         # provide access function public setter for name
+        self.__name = newName
 
     def printMe(self):
         print('== Information ==')
-        print('ID:%s Name:%s' % (??, ??)) # access properties ID and name within class
+        print('ID:%s Name:%s' % (self.__ID, self.__name)) # access properties ID and name within class
 
     def whoAmI(self):
-        raise ??('subclass must implement abstract method')
+        raise NotImplementedError('subclass must implement abstract method')
 
 
 # testing
-#obj0 = Person('99', 'Test')
-#obj0.whoAmI()
+obj0 = Person('99', 'Test')
+# obj0.whoAmI()
 
 
 
