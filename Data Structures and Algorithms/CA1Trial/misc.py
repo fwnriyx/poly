@@ -95,9 +95,12 @@ class misc:
         else:
             print("Invalid choice. Please enter 'E' for encryption or 'D' for decryption.")
 
+    def __choice3(self):
+        return self
+
     def __choice8(self):
         print()
-        print(f'Bye, thanks for using my program!')
+        print(f'Bye, thanks for using ST1507 DSAA: Caesar Cipher Encrypted Message Analyzer!')
 misc_instance = misc()
 misc_instance.menu()
 
