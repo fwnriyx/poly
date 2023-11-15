@@ -96,7 +96,24 @@ class misc:
             print("Invalid choice. Please enter 'E' for encryption or 'D' for decryption.")
 
     def __choice3(self):
+        from fileAnalysis import LinkedList
+        filename = input("Enter the file path: ")
+        try:
+            letter_freq = LinkedList(filename)
+            letter_freq.letterCount()
+            # letter_freq.display()
+            letter_freq.plotGraph()
+        except FileNotFoundError:
+            print("File not found. Please enter a valid file path.")
         return self
+    def __choice4(self):
+        pass
+    def __choice5(self):
+        pass
+    def __choice6(self):
+        pass
+    def __choice7(self):
+        pass
 
     def __choice8(self):
         print()
