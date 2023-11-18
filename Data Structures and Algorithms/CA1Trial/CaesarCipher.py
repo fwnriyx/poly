@@ -49,7 +49,8 @@ class CaesarCipher:
                     self.__result += chr(((ord(char) + self.__shift - ord("a")) % 26) + ord("a"))
             else:
                 self.__result += char  
-        print(f"Plaintext:\n {self.__text}\n Encrypted text:\n {self.__result}")
+        # print(f"Plaintext:\n {self.__text}\n Encrypted text:\n {self.__result}")
+        return self.__result, self.__text
 
 """
 Using inheritance (CaesarCrypt as parent and next class as child), I would like to replicate the same function 

@@ -9,6 +9,14 @@ Why use @static methods?
 Static methods are used to group functions which have some logical connection with a class to the class. 
 """
 
+'''
+Fixes needed:
+    - Relative pathing
+    - Formatting answers
+    - Option 5 (needs inheritance)
+    - 2 extra feature ideas
+'''
+
 class misc:
     def __init__(self):
         pass
@@ -77,7 +85,9 @@ class misc:
         shift = int(input(f"Enter the cipher key: \n"))
         text = input(f"Please type text that you want to encrypt: \n")
         caesar_cipher = CaesarCipher()  # Create an instance of the CaesarCipher class
-        caesar_cipher.CaesarCrypt(choice, shift, text)
+        result, text = caesar_cipher.CaesarCrypt(choice, shift, text)
+        print(f"Plaintext:  {text}\nEncrypted text: {result}")
+
 
     def __choice2(self):
         from fileCypher import FileCaesarCipher
@@ -100,16 +110,37 @@ class misc:
         filename = input("Enter the file path: ")
         try:
             letter_freq = LinkedList(filename)
-            letter_freq.display()
+            letter_freq.letterCount()
+            letter_freq.plotGraph()
         except FileNotFoundError:
             print("File not found. Please enter a valid file path.")
         return self
+    
+    def __choice4(self):
+        textFile = input("Please enter the file to analyze: ")
+        refFile = input("Please enter the reference frequencies file: ") 
+        from inference import inference
+        inference_instance = inference(textFile, refFile)
+        inference_instance.unicodeSearch()
+        inference_instance.inferKey()
+        pass
+
+    def __choice5(self):
+        from BatchInference import BatchInference
+        batch_instance = BatchInference()
+        batch_instance.batch_process_files()
+        pass
+
+    def __choice6(self):
+        pass
+
+    def __choice7(self):
+        pass
 
     def __choice8(self):
         print()
         print(f'Bye, thanks for using ST1507 DSAA: Caesar Cipher Encrypted Message Analyzer!')
-    
-misc_instance = misc()
-misc_instance.menu()
+# misc_instance = misc()
+# misc_instance.menu()
 
 
