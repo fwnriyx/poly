@@ -1,4 +1,5 @@
 from CaesarCipher import CaesarCipher
+import os
 
 class FileValidationError(Exception):
     pass
@@ -10,16 +11,19 @@ class FileCaesarCipher(CaesarCipher):
             text = file.read()
         super().__init__(shift, text)
         self.__choice = choice
-        # self._CaesarCipher__text = text  # Accessing private variable from the parent class
-        
+
+    def get_full_path(self, file_path):
+        # Combine the provided file path with the current working directory
+        return os.path.join(os.getcwd(), file_path)
 
     def getFile(self):
+        full_path = self.get_full_path(self.__file_path)
         try:
-            with open(self.__file_path, 'r') as file:
+            with open(full_path, 'r') as file:
                 data = file.read()
             return data
         except FileNotFoundError:
-            raise FileNotFoundError(f'File {self.__file_path} not found')
+            raise FileNotFoundError(f'File {full_path} not found')
 
     def encrypt_file(self, shift):
         self.__shift = shift
@@ -27,6 +31,7 @@ class FileCaesarCipher(CaesarCipher):
         encrypted_text = self.CaesarCrypt(self.__choice, self.__shift, data)
         # with open(self.__file_path, "w") as file:
         #     file.write(encrypted_text)
+        return encrypted_text
 
     def decrypt_file(self, shift):
         self.__shift = shift
@@ -34,3 +39,4 @@ class FileCaesarCipher(CaesarCipher):
         decrypted_text = self.CaesarCrypt(self.__choice, self.__shift, data)
         # with open(self.__file_path, "w") as file:
         #     file.write(decrypted_text)
+        return decrypted_text
