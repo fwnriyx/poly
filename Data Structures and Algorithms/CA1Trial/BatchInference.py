@@ -33,9 +33,7 @@ class BatchInference(inference):
             decrypted_file = f"file{index}.txt"
             self.__file_list.append(decrypted_file)
             self.__decryption_info.append(decryption_info)
-
-
-
+    
         # Display decryption information in the console
         for info in self.__decryption_info:
             print(info)
@@ -45,7 +43,6 @@ class BatchInference(inference):
 
     def create_log_file(self):
         log_file_path = os.path.join(self.__folder, "log.txt")
-
         with open(log_file_path, "w") as log_file:
             for index, (decrypted_file, key) in enumerate(zip(self.__file_list, self.__decryption_info), start=1):
                 log_file.write(f"Decrypted file {index}: {decrypted_file} with key {key}\n")
