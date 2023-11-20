@@ -149,6 +149,6 @@ class LinkedList():
                     
 
 #Testing
-linkedList = LinkedList("TwinkleStar.txt")
-sorted_letters = dict(linkedList.sortLetters())
-linkedList.plotGraph()
+# linkedList = LinkedList("TwinkleStar.txt")
+# sorted_letters = dict(linkedList.sortLetters())
+# linkedList.plotGraph()
