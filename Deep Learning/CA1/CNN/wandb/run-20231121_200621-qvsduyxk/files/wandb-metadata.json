@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.8.18",
+    "heartbeatAt": "2023-11-21T12:06:23.076150",
+    "startedAt": "2023-11-21T12:06:21.739223",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/fwnriyx/poly.git",
+        "commit": "68fbc348e362d69fb19fd2f34ee331173147efd8"
+    },
+    "email": "forschoolwork.exe@gmail.com",
+    "root": "C:/Users/muhdf/OneDrive/Documents/GitHub/poly",
+    "host": "DESKTOP-CLK6COE",
+    "username": "muhdf",
+    "executable": "c:\\Users\\muhdf\\anaconda3\\envs\\gpu_env\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2500.0,
+        "min": 0.0,
+        "max": 2500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 2500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.83886337280273,
+            "used": 392.3256950378418
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 15.846488952636719
+    }
+}

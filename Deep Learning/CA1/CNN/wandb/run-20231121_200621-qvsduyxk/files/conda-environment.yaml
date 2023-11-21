@@ -1,0 +1,4 @@
+name: gpu_env
+channels:
+  - defaults
+prefix: C:\Users\muhdf\miniconda3\envs\gpu_env
