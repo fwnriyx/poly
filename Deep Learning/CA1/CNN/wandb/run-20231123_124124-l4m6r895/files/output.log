@@ -1,0 +1,82 @@
+
+[34m[1mwandb[39m[22m: [33mWARNING[39m The save_model argument by default saves the model in the HDF5 format that cannot save custom objects like subclassed models and custom layers. This behavior will be deprecated in a future release in favor of the SavedModel format. Meanwhile, the HDF5 model is saved as W&B files and the SavedModel as W&B Artifacts.
+Epoch 1/10
+  1/283 [..............................] - ETA: 2:28:26 - loss: 2.7117 - accuracy: 0.1250WARNING:tensorflow:Callback method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0044s vs `on_train_batch_end` time: 0.0045s). Check your callbacks.
+283/283 [==============================] - ETA: 0s - loss: 2.3903 - accuracy: 0.2665
+
+283/283 [==============================] - ETA: 0s - loss: 2.3903 - accuracy: 0.2665INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+[34m[1mwandb[39m[22m: Adding directory to artifact (c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best)... Done. 0.4s
+283/283 [==============================] - 39s 25ms/step - loss: 2.3903 - accuracy: 0.2665 - val_loss: 2.2275 - val_accuracy: 0.2903
+Epoch 2/10
+278/283 [============================>.] - ETA: 0s - loss: 1.6463 - accuracy: 0.4842
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op while saving (showing 1 of 1). These functions will not be directly callable after loading.
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+
+278/283 [============================>.] - ETA: 0s - loss: 1.6463 - accuracy: 0.4842INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op while saving (showing 1 of 1). These functions will not be directly callable after loading.
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+[34m[1mwandb[39m[22m: Adding directory to artifact (c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best)... Done. 0.4s
+283/283 [==============================] - 7s 25ms/step - loss: 1.6427 - accuracy: 0.4850 - val_loss: 1.8685 - val_accuracy: 0.4060
+Epoch 3/10
+278/283 [============================>.] - ETA: 0s - loss: 1.2437 - accuracy: 0.6180INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op while saving (showing 1 of 1). These functions will not be directly callable after loading.
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+[34m[1mwandb[39m[22m: Adding directory to artifact (c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best)... Done. 0.4s
+283/283 [==============================] - 7s 25ms/step - loss: 1.2432 - accuracy: 0.6179 - val_loss: 1.4441 - val_accuracy: 0.5513
+Epoch 4/10
+279/283 [============================>.] - ETA: 0s - loss: 0.9682 - accuracy: 0.6983INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op while saving (showing 1 of 1). These functions will not be directly callable after loading.
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+[34m[1mwandb[39m[22m: Adding directory to artifact (c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best)... Done. 0.4s
+283/283 [==============================] - 7s 24ms/step - loss: 0.9672 - accuracy: 0.6993 - val_loss: 1.4091 - val_accuracy: 0.5553
+Epoch 5/10
+280/283 [============================>.] - ETA: 0s - loss: 0.7529 - accuracy: 0.7727INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op while saving (showing 1 of 1). These functions will not be directly callable after loading.
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+[34m[1mwandb[39m[22m: Adding directory to artifact (c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best)... Done. 0.5s
+283/283 [==============================] - 7s 24ms/step - loss: 0.7525 - accuracy: 0.7727 - val_loss: 1.2472 - val_accuracy: 0.6147
+Epoch 6/10
+283/283 [==============================] - 2s 8ms/step - loss: 0.5404 - accuracy: 0.8457 - val_loss: 1.3389 - val_accuracy: 0.6033
+Epoch 7/10
+277/283 [============================>.] - ETA: 0s - loss: 0.3948 - accuracy: 0.8921INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124124-l4m6r895\files\model-best\assets
+283/283 [==============================] - 7s 26ms/step - loss: 0.3942 - accuracy: 0.8922 - val_loss: 1.2225 - val_accuracy: 0.6317
+Epoch 8/10
+283/283 [==============================] - 2s 8ms/step - loss: 0.2807 - accuracy: 0.9293 - val_loss: 1.3342 - val_accuracy: 0.6293
+Epoch 9/10
+283/283 [==============================] - 2s 8ms/step - loss: 0.2038 - accuracy: 0.9503 - val_loss: 1.4950 - val_accuracy: 0.6207
+Epoch 10/10
+283/283 [==============================] - 2s 8ms/step - loss: 0.1528 - accuracy: 0.9658 - val_loss: 1.4794 - val_accuracy: 0.6363
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 126, 126, 32)      320
+ activation (Activation)     (None, 126, 126, 32)      0
+ max_pooling2d (MaxPooling2D  (None, 63, 63, 32)       0
+ )
+ flatten (Flatten)           (None, 127008)            0
+ dense (Dense)               (None, 128)               16257152
+ activation_1 (Activation)   (None, 128)               0
+ dense_1 (Dense)             (None, 15)                1935
+=================================================================
+Total params: 16,259,407
+Trainable params: 16,259,407
+Non-trainable params: 0
+_________________________________________________________________
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d_1 (Conv2D)           (None, 126, 126, 64)      640
+ activation_2 (Activation)   (None, 126, 126, 64)      0
+ conv2d_2 (Conv2D)           (None, 124, 124, 128)     73856
+ activation_3 (Activation)   (None, 124, 124, 128)     0
+ conv2d_3 (Conv2D)           (None, 122, 122, 256)     295168
+ activation_4 (Activation)   (None, 122, 122, 256)     0
+=================================================================
+Total params: 369,664
+Trainable params: 369,664
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/100

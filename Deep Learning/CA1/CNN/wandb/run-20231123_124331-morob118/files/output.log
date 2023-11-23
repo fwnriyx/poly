@@ -1,0 +1,6 @@
+Epoch 1/100
+
+281/283 [============================>.] - ETA: 0s - loss: 2.3484 - accuracy: 0.3213
+
+281/283 [============================>.] - ETA: 0s - loss: 2.3484 - accuracy: 0.3213INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124331-morob118\files\model-best\assets
+INFO:tensorflow:Assets written to: c:\Users\p2222811\Documents\GitHub\poly\Deep Learning\CA1\CNN\wandb\run-20231123_124331-morob118\files\model-best\assets

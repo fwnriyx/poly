@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.18363-SP0",
+    "python": "3.8.18",
+    "heartbeatAt": "2023-11-23T04:44:13.117549",
+    "startedAt": "2023-11-23T04:43:31.486724",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/fwnriyx/poly.git",
+        "commit": "85415c6dba70f6bc7e646f0b7810a09e3bb423c7"
+    },
+    "email": "fitriamir.22@ichat.sp.edu.sg",
+    "root": "C:/Users/p2222811/Documents/GitHub/poly",
+    "host": "T2131-08",
+    "username": "p2222811",
+    "executable": "c:\\Users\\p2222811\\AppData\\Local\\anaconda3\\envs\\gpu_env\\python.exe",
+    "cpu_count": 18,
+    "cpu_count_logical": 36,
+    "cpu_freq": {
+        "current": 3000.0,
+        "min": 0.0,
+        "max": 3000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3000.0,
+            "min": 0.0,
+            "max": 3000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1862.0263633728027,
+            "used": 697.6861763000488
+        }
+    },
+    "gpu": "GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 127.73358917236328
+    }
+}

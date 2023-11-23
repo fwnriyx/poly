@@ -1,0 +1,26 @@
+Min pixel value in x_train: 0.0
+Max pixel value in x_train: 255.0
+Min pixel value in x_test: 0.0
+Max pixel value in x_test: 255.0
+Any missing values in x_train: False
+Any missing values in x_test: False
+Classes in y_train: 15
+Names of classes: ['Bean' 'Bitter_Gourd' 'Bottle_Gourd' 'Brinjal' 'Broccoli' 'Cabbage'
+ 'Capsicum' 'Carrot' 'Cauliflower' 'Cucumber' 'Papaya' 'Potato' 'Pumpkin'
+ 'Radish' 'Tomato']
+(128, 128)
+Label Bean makes up 8.64% of the training data
+Label Bitter_Gourd makes up 7.98% of the training data
+Label Bottle_Gourd makes up 4.88% of the training data
+Label Brinjal makes up 9.61% of the training data
+Label Broccoli makes up 8.31% of the training data
+Label Cabbage makes up 5.57% of the training data
+Label Capsicum makes up 3.89% of the training data
+Label Carrot makes up 2.84% of the training data
+Label Cauliflower makes up 6.50% of the training data
+Label Cucumber makes up 8.99% of the training data
+Label Papaya makes up 6.27% of the training data
+Label Potato makes up 4.18% of the training data
+Label Pumpkin makes up 9.02% of the training data
+Label Radish makes up 2.75% of the training data
+Label Tomato makes up 10.58% of the training data
