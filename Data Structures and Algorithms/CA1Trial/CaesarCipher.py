@@ -1,11 +1,13 @@
 import os
 from os.path import exists,isfile
+from history import History
 
 class CaesarCipher:
-    def __init__(self, shift = None, text = None, result = ""):
+    def __init__(self, shift = None, text = None):
         self.__shift = shift
         self.__text = text
-        self.__result = result
+        self.__result = ""
+        self.__history = History()
     #Task 1a/2a - Encrypt Message From File/User Input
     #To do: Menu, EncDec Message and File
     #To do: Menu, EncDec Message and File
@@ -19,8 +21,10 @@ class CaesarCipher:
     def CaesarCrypt(self, choice, shift, text):
         self.__shift = shift
         self.__text = text
+        cryptType = "Encrypt"
         if choice == "D":
             self.__shift *= -1
+            cryptType = "Decrypt"
         elif choice != "E" and choice != "D":
             raise ValueError(f'Invalid input')
         for i in range(len(self.__text)):
@@ -50,9 +54,17 @@ class CaesarCipher:
             else:
                 self.__result += char  
         # print(f"Plaintext:\n {self.__text}\n Encrypted text:\n {self.__result}")
-        return self.__result, self.__text
+
+        result = self.__result
+        text = self.__text
+        self.__history.add_entry(text, cryptType, result)
+        history = self.__history
+        return result, text
 
 """
 Using inheritance (CaesarCrypt as parent and next class as child), I would like to replicate the same function 
 as the parent class but with the file as the input instead of user input.
 """
+#test
+caesarcipher = CaesarCipher()
+caesarcipher.CaesarCrypt("E", 3, "The quick brown fox jumps over the lazy dog")
