@@ -11,9 +11,8 @@ class Node:
         self.next = None
 
 class LinkedList():
-    def __init__(self, filename, folder = "DecryptedFiles"):
+    def __init__(self, filename):
         self.head = None
-        self.__folder = folder
         self.__filename = filename
         self.__text = ""
         self.__sorted_letters = []
@@ -30,8 +29,7 @@ class LinkedList():
             current = current.next
     
     def letterCount(self):
-        full_path = os.path.join(self.__folder, self.__filename)  # Provide the correct file path
-        with open(full_path, 'r') as file:
+        with open(self.__filename, 'r') as file:
             self.__text = file.read().upper()
         '''    
         Filter all punctuation, make all text uppercase to keep consistency    
