@@ -40,11 +40,12 @@ class LinkedList():
         '''
         #Sort letters
         letter_counts = {}
+        #letter_counts = {chr(i): 0 for i in range(ord('A'), ord('Z') + 1)}
         for char in self.__text:
             if char.isalpha():
                 char = char.upper()  # Convert to uppercase to make it case-insensitive
                 letter_counts[char] = letter_counts.get(char, 0) + 1
-        sorted_letters = sorted(letter_counts.items(), key=lambda x: (-x[1], x[0]))
+        sorted_letters = sorted(letter_counts.items(), key=lambda x: (x[1], x[0]))
         # Check if letter frequency is correctly displayed/sorted
         for letter, frequency in sorted_letters:
             self.insert(letter, frequency)
@@ -66,7 +67,8 @@ class LinkedList():
             if char.isalpha():
                 char = char.upper()
                 letter_counts[char] = letter_counts.get(char, 0) + 1
-        sorted_letters = sorted(letter_counts.items(), key=lambda x: (-x[1], x[0]))
+        #change
+        sorted_letters = sorted(letter_counts.items(), key=lambda x: (x[1], x[0]))
         for letter, frequency in sorted_letters:
             self.insert(letter, frequency)
         self.__sorted_letters = sorted_letters
@@ -86,7 +88,7 @@ class LinkedList():
         #Divide by total number of letters in the text
         frequencies = {node.letter: round(((node.frequency/lettercount)*100), 2) for node in self}
         max_frequency = max(relative_frequencies.values())
-        sorted_frequencies = sorted(frequencies.items(), key=lambda x: (-x[1],x[0]))
+        sorted_frequencies = sorted(frequencies.items(), key=lambda x: (x[1],x[0]))
 
         #I need to drop the letters if they are on the same level as any asterisks, so i can plot them later on
         #Do this by using ord() to get the ascii value of the letter, and then subtracting 65 (ascii value of A) 
@@ -95,14 +97,14 @@ class LinkedList():
         Let's say max_frequency is 3.5. If you use math.ceil(3.5), it becomes 4. So, ord('Z') - 4 gives you the distance from 'Z' to the letter right above the asterisks, 
         but it doesn't include that letter itself. Hence, you add 1 to include that letter.
         '''
-        totalLetters = ord('Z') - math.ceil(max_frequency) + 1
+        totalLetters = ord('Z') - math.ceil(max_frequency) + 2
         final_letters = ""
         for i in range(ord('A'), totalLetters):
             final_letters += chr(i)  
         for letter in final_letters:
             count = frequencies.get(letter, 0)
             if letter == 'K':
-                print(' ' * 52 + f'| {letter}- {count:.2f}%   TOP 5 FREQ')
+                print(' ' * 52 + f'| {letter}- {count:.2f}%   Lowest 5 FREQ')
             elif letter == 'L':
                 print(' ' * 52 + f'| {letter}- {count:.2f}%   -----------')
             elif letter == 'M':
@@ -110,7 +112,7 @@ class LinkedList():
             elif letter == 'N':
                 print(' ' * 52 + f'| {letter}- {count:.2f}%   | {sorted_letters[1][0]}: {frequencies[sorted_letters[1][0]]}%')
             elif letter == 'O':
-                print(' ' * 52 + f'| {letter}- {count:.2f}%   | {sorted_letters[2][0]}: {frequencies[sorted_letters[2][0]]}%')
+                print(' ' * 52 + f'| {letter}- {count:.2f}%  | {sorted_letters[2][0]}: {frequencies[sorted_letters[2][0]]}%')
             elif letter == 'P':
                 print(' ' * 52 + f'| {letter}- {count:.2f}%   | {sorted_letters[3][0]}: {frequencies[sorted_letters[3][0]]}%')
             elif letter == 'Q':
@@ -134,8 +136,8 @@ class LinkedList():
             I can use indexing to index the letters from final_letters, and then use the index to get the frequency from frequencies
             final_letters[i - 1]
             '''
-            count = frequencies.get(final_letters[::-1][i - 1], 0)
-            row += f'| {final_letters[::-1][i - 1]}- {count:.2f}%'
+            # count = frequencies.get(final_letters[::-1][i - 1], 0)
+            # row += f'| {final_letters[::-1][i - 1]}- {count:.2f}%'
             print(row)
             
             '''
