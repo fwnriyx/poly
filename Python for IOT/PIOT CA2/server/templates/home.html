@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </div> 
+        -->
+        <hr>
+        <nav class="navbar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/PIOT CA2/server/templates/data.html">View Data</a>
+                </li>
+            </ul>
+            <div class="login-container">
+                <div class="login-container">
+                    {% if user_logged_in %}
+                        <a class="btn btn-danger" href="{{ url_for('logout_page') }}">Logout</a>
+                    {% else %}
+                        <a class="btn btn-primary" href="{{ url_for('login_page') }}">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+        <div class="content-container">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    {% include "includes/footer.html" %}
+</body>
+</html>
