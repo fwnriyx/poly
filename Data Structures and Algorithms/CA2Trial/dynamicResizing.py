@@ -1,73 +1,85 @@
 import re
 
 class HashTable:
-    def __init__(self,size):
+    def __init__(self, size):
         self.size = size
-        self.keys = [None] * self.size
-        self.buckets = [None] * self.size
+        self.keys = [None] * size
+        self.buckets = [None] * size
 
-    # A simple remainder method to convert key to index
-    def hashFunction(self, key ):
-        return sum(ord(char) for char in key) % self.size
-    
-    # Deal with collision resolution by means of
-    # linear probing with a 'plus 1' rehash
-    def rehashFunction(self, oldHash ):
-        return (oldHash + 1) % self.size
+    # Pass the current size as an argument to hashFunction
+    def hashFunction(self, key, current_size):
+        if key == 0:
+            return 0
+        return sum(ord(char) for char in key) % current_size
+
+    # def rehashFunction(self, oldHash):
+    #     return (oldHash + 1) % self.size
+
+    def rehashFunction(self, oldHash, attempt):
+        return (oldHash + attempt) % self.size
 
     def _resize_and_rehash(self):
-        # Double the size of the hash table
         new_size = self.size * 2
         new_keys = [None] * new_size
         new_buckets = [None] * new_size
 
-        # Iterate over the existing key-value pairs and rehash
-        for i in range(self.size):
-            if self.keys[i] is not None:
-                new_index = self.hashFunction(self.keys[i])  # Use the new hash function
+        # Use a while loop to ensure all non-empty buckets are processed
+        index = 0
+        while index < self.size:
+            if self.keys[index] is not None:
+                # new_index = self.hashFunction(self.keys[index], self.size)  # Use the new size for hashing
+                new_index = self.hashFunction(self.keys[index], new_size)
+                attempt = 1
+                # while new_buckets[new_index] is not None:
+                #     print("Collision")
+                #     new_index = self.rehashFunction(new_index)
                 while new_buckets[new_index] is not None:
-                    new_index = self.rehashFunction(new_index)  # Use the rehash function
+                    print("Collision")
+                    new_index = self.rehashFunction(new_index, attempt)
+                    attempt += 1
+                new_keys[new_index] = self.keys[index]
+                new_buckets[new_index] = self.buckets[index]
+            index += 1
 
-                # Assign the key and value to the new buckets
-                new_keys[new_index] = self.keys[i]
-                new_buckets[new_index] = self.buckets[i]
-
-        # Update the hash table with the new size and rehashed values
-        self.size = new_size
+        self.size = new_size  # Update the hash table size
         self.keys = new_keys
         self.buckets = new_buckets
 
-
     def __setitem__(self, key, value):
-        index = self.hashFunction( key)
+        index = self.hashFunction(key, self.size)
         startIndex = index
+        attempt = 1
         while True:
-        # If bucket is empty then just use it
-            if self.buckets[index] == None:
-                self.buckets[index] = value
-                self.keys[index] = key
+            if self.keys[index % self.size] is None or self.keys[index % self.size] == key:
+                self.buckets[index % self.size] = value
+                self.keys[index % self.size] = key
                 break
-            else: # If not empty and the same key then just overwrite
-                if self.keys[index] == key:
-                    self.buckets[index] = value
-                    break
-                else: # Look for another available bucket
-                    index = self.rehashFunction(index)
-            # We must stop if no more buckets
-                    if index == startIndex:
+            else:
+                index = self.rehashFunction(index, attempt)
+                attempt += 1
+                if index == startIndex:
+                    # Resize the hash table if necessary
+                    if sum(bucket is not None for bucket in self.buckets) >= self.size:
+                        self._resize_and_rehash()
+                        # Recalculate the index using the new size
+                        index = self.hashFunction(key, self.size)
+                        #insert the key and value
+                        self.buckets[index % self.size] = value
+                        self.keys[index % self.size] = key
                         break
 
-    def __getitem__(self,key):
-        index = self.hashFunction(key)
+    def __getitem__(self, key):
+        index = self.hashFunction(key, self.size)
         startIndex = index
+        attempt = 1
         while True:
-            if self.keys [index] == key: # Will be mostly the case unless value was previously rehashed at insertion
-                return self.buckets[index]
-            else: # Value for the key is somewhere else (due to imperfect hash function)
-                index = self.rehashFunction(index )
+            if self.keys[index % self.size] == key:
+                return self.buckets[index % self.size]
+            else:
+                index = self.rehashFunction(startIndex, attempt)
+                attempt += 1
                 if index == startIndex:
                     return None
-                
 
 
 def tokenize_expression(exp):
@@ -173,7 +185,7 @@ def buildParseTree(exp):
         # tokens = exp.split()
         tokens = tokenize_expression(exp)
         tokens = exponentConverter(tokens)
-        print(tokens)
+        # print(tokens)
         stack = Stack()
         tree = BinaryTree('?')
         stack.push(tree)
@@ -231,49 +243,28 @@ def evaluateParseTree(tree, hashtable):
                 elif op == '/':
                     return evaluateParseTree(leftTree, hashtable) / evaluateParseTree(rightTree, hashtable)
             except TypeError:
-                    if isinstance(tree.getKey(), str):
-                        variable_value = hashtable[tree.getKey()]
-                        if variable_value is not None:
-                            return variable_value
-                # return evaluateParseTree(leftTree, hashtable)
+                if isinstance(tree.getKey(), str):
+                    variable_value = hashtable[tree.getKey()]
+                    if variable_value is not None or tree.getKey() in hashtable.keys:
+                        return variable_value
         else:
             return tree.getKey()
 
-# Main Program
-exp = 'C=(2*(2*2))'
-exp1 = 'B=(2*C)'
-exp2 = 'A=(C+(2**6.4))'
-exp3 = 'C=(4+(5+6))'
-# eq_idx = exp.index("=") # get idx of equal
-
-eq_idx = exp2.index("=") # get idx of equal
-variable = exp2[:eq_idx]
-equation = exp2[eq_idx + 1:]
+exp = 'A=(2*(2*2))'
+exp1 = 'B=(2*10)'
+exp2 = 'C=(2+6.4)'
+exp3 = 'D=(4+(5+6))'
+exp4 = 'E=(2**6.4)'
 
 eqn_table = HashTable(1)
 
-tree = buildParseTree(equation)
-tree.printPreorder(0)
+for e in [exp, exp1, exp2, exp3, exp4]:
+    eq_idx = e.index("=")  # get idx of equal
+    variable = e[:eq_idx]
+    equation = e[eq_idx + 1:]
 
-eqn_table[variable] = equation
-
-print (f'The expression: {exp2} evaluates to: {evaluateParseTree(tree, eqn_table)}')  
-print (f'{exp2}=> {evaluateParseTree(tree, eqn_table)}') 
-
-# for e in [exp, exp1, exp2, exp3]:
-#     # print("hellooooo")
-#     eq_idx = e.index("=") # get idx of equal
-#     variable = e[:eq_idx]
-#     equation = e[eq_idx + 1:]
-
-#     eqn_table = HashTable(1)
-
-#     tree = buildParseTree(equation)
-#     tree.printPreorder(0)
-
-#     eqn_table[variable] = equation
-
-#     print (f'The expression: {e} evaluates to: {evaluateParseTree(tree)}')  
-#     print (f'{e}=> {evaluateParseTree(tree)}') 
-
-# print(f'Hash Table: {eqn_table.keys} => {eqn_table=buckets}')
+    tree = buildParseTree(equation)
+    eqn_table[variable] = equation
+    print(variable, equation)
+    print(f'The expression: {e} evaluates to: {evaluateParseTree(tree, eqn_table)}')
+    print(f"This is the hashtable: {eqn_table.keys} => {eqn_table.buckets}")
