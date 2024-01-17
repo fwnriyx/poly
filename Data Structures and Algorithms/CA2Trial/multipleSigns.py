@@ -153,52 +153,113 @@ class BinaryTree:
 def buildParseTree(exp):
         # tokens = exp.split()
         tokens = tokenize_expression(exp)
-        # print(tokens)
         tokens = exponentConverter(tokens)
         stack = Stack()
-        tree = BinaryTree('*')
+        tree = BinaryTree('?')
         stack.push(tree)
         currentTree = tree
         for t in tokens:
         # RULE 1: If token is '(' add a new node as left child
         # and descend into that node
             if t == '(':
-                currentTree.insertLeft('*')
+                currentTree.insertLeft('?')
                 stack.push(currentTree)
                 currentTree = currentTree.getLeftTree()
             #Currently, its going into the right case
             #but for some reason, there is a 2 at the start and a ? instead of a 2 at the end..
-            elif t in '**':
+            # elif t in ['**']:
+            #     #Make it such that it loops downwards the amount of times the exponent is
+            #     #First, insert asterisk, then insert number, loop that
+            #     idx = tokens.index(t)
+            #     #ORIGINAL LOOP
+            #     try:
+            #         # currentTree.setKey(t)
+            #         timetoLoop = int(tokens[idx + 1])
+            #         currentTree.setKey('*')
+            #         # currentTree.insertRight('*')
+            #         # stack.push(currentTree)
+            #         # currentTree = currentTree.getRightTree()
+            #         # print("Asterisk")
+            #         for i in range(timetoLoop - 1):
+            #             # Insert asterisk
+            #             # currentTree.setKey('*')
+            #             currentTree.insertRight('*')
+            #             stack.push(currentTree)
+            #             currentTree = currentTree.getRightTree()
+                        
+            #             print("Asterisk")
+
+            #             # Insert left child
+            #             # currentTree.setKey(tokens[idx - 1])
+            #             currentTree.insertLeft(tokens[idx - 1])
+            #             stack.push(currentTree)
+            #             currentTree = currentTree.getLeftTree()
+            #             print("Number")
+
+            #         # Insert the last number
+            #         currentTree.insertRight(tokens[idx - 1])
+            #         stack.push(currentTree)
+            #         currentTree = currentTree.getRightTree()
+            #         print("Number")
+
+            #         # Drop the exponent from the list
+            #         tokens.pop(idx + 1)
+            #     except ValueError:
+            #         print("It's a letter!")
+            elif t in ['**']:
                 #Make it such that it loops downwards the amount of times the exponent is
                 #First, insert asterisk, then insert number, loop that
                 idx = tokens.index(t)
-                #Loop
+                #ORIGINAL LOOP
                 try:
+                    # currentTree.setKey(t)
                     timetoLoop = int(tokens[idx + 1])
-                    for i in range(timetoLoop - 1):
-                        # Insert asterisk
-                        currentTree.insertRight('*')
+                    currentTree.setKey('*')
+                    # currentTree.insertRight('*')
+                    # stack.push(currentTree)
+                    # currentTree = currentTree.getRightTree()
+                    # print("Asterisk")
+                    try:
+                        for i in range(timetoLoop - 2):
+                            # Insert asterisk
+                            currentTree.setKey('*')
+                            currentTree.insertRight('*')
+                            stack.push(currentTree)
+                            currentTree = currentTree.getRightTree()
+
+                            #Insert left child
+                            currentTree.insertLeft('?')
+                            stack.push(currentTree)
+                            currentTree = currentTree.getLeftTree()
+                            
+                            # print("Asterisk")
+
+                            # Insert left child
+                            # currentTree.setKey(tokens[idx - 1])
+                            currentTree.setKey(int(tokens[idx - 1]))
+                            # stack.push(currentTree)
+                            parent = stack.pop()
+                            currentTree = parent
+                            print("Number")
+
+                        # Insert the last number
+                        currentTree.insertRight(int(tokens[idx - 1]))
                         stack.push(currentTree)
                         currentTree = currentTree.getRightTree()
+                        print("Number")
 
-                        # Insert left child
-                        currentTree.insertLeft(tokens[idx - 1])
-                        stack.push(currentTree)
-                        currentTree = currentTree.getLeftTree()
-
-                    # Insert the last number
-                    currentTree.insertRight(tokens[idx - 1])
-
-                    # Drop the exponent from the list
-                    tokens.pop(idx + 1)
+                        # Drop the exponent from the list
+                        tokens.pop(idx + 1)
+                    except ValueError:
+                        print("First Digit is a letter or word!")
                 except ValueError:
-                    print("It's a letter!")
-                
+                    print("Exponent is a letter or word!")
+
         # RULE 2: If token is operator set key of current node
         # to that operator and add a new node as right child
         # and descend into that node
             elif t in ['+', '-', '*', '/']:
-                print("Wrong part")
+                # print("Wrong part")
                 currentTree.setKey(t)
                 currentTree.insertRight('?')
                 stack.push(currentTree)
@@ -228,52 +289,24 @@ def evaluateParseTree(tree):
         leftTree = tree.getLeftTree()
         rightTree = tree.getRightTree()
         op = tree.getKey()
-        # print(f'This is the operator:' + op)
-        # print(f'These are the left and right trees:' + str(leftTree) + str(rightTree))
-        
         if leftTree != None and rightTree != None:
-            # print("im here")
-            # Add code here to check for variable in equation
-            '''
-            b=(a+(2*4))
-            1. Handle exponents
-            
-            return evaluateParseTree(leftTree)
-            '''
-            
-            # if op == '*' and leftTree =='*':
-            #     return evaluateParseTree(leftTree) ** evaluateParseTree(rightTree)
-            # if op == '*' and rightTree =='*':
-            #     return evaluateParseTree(leftTree) ** evaluateParseTree(rightTree)
-            
             if op == '+':
                 return evaluateParseTree(leftTree) + evaluateParseTree(rightTree)
-            elif op == '**':
-                try: 
-                    print("Its going through")
-                    int(evaluateParseTree(rightTree))
-                except ValueError:
-                    print("Its an asterisk")
-                return evaluateParseTree(leftTree) ** evaluateParseTree(rightTree)
+            # elif op == '**':
+            #     print("Im here")
+            #     return evaluateParseTree(leftTree) ** evaluateParseTree(rightTree)
             elif op == '-':
-                print(op)
                 return evaluateParseTree(leftTree) - evaluateParseTree(rightTree)
             elif op == '*':
-                print(op)
                 return evaluateParseTree(leftTree) * evaluateParseTree(rightTree)
             elif op == '/':
                 return evaluateParseTree(leftTree) / evaluateParseTree(rightTree)
-            # if op == '**':
-            #     print("No errors")
-            # else: 
-            #     print("Error")
-
-            
         else:
             return tree.getKey()
         
 # Main Program
-exp = 'C=(4+5+6)'
+# exp = 'C=(2*(2*2))'
+exp = 'C=(2**3)'
 eq_idx = exp.index("=") # get idx of equal
 
 # Slicing and storing variable and equation in new vars
@@ -288,4 +321,23 @@ eqn_table[variable] = equation
 
 print (f'The expression: {exp} evaluates to: {evaluateParseTree(tree)}')  
 print (f'{exp}=> {evaluateParseTree(tree)}') 
-print(f'Hash Table: {eqn_table.keys} => {eqn_table.buckets}')
+# print(f'Hash Table: {eqn_table.keys} => {eqn_table=buckets}')
+
+
+# exp1 = 'B=(2*C)'
+# # exp = 'C=(2**3)'
+# eq_idx = exp.index("=") # get idx of equal
+
+# # Slicing and storing variable and equation in new vars
+# variable1 = exp1[:eq_idx]
+# equation1= exp1[eq_idx + 1:]
+
+# # eqn_table = HashTable(100)
+# tree = buildParseTree(equation1)
+# tree.printPreorder(0)
+
+# eqn_table[variable1] = equation1
+
+# print (f'The expression: {exp} evaluates to: {evaluateParseTree(tree)}')  
+# print (f'{exp}=> {evaluateParseTree(tree)}') 
+# print(f'Hash Table: {eqn_table.keys} => {eqn_table.buckets}')
