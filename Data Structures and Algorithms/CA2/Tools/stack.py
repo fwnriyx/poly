@@ -6,6 +6,8 @@ Class:      DAAA2B06
 DSAA Assignment 2
 '''
 
+import re
+
 # Stack Class
 class Stack:
     def __init__(self):

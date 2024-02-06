@@ -6,8 +6,11 @@ Class:      DAAA2B06
 DSAA Assignment 2
 '''
 
+import re
+
+# BinaryTree Class
 class BinaryTree:
-    def __init__(self,key, leftTree = None, rightTree = None):
+    def __init__(self, key, leftTree = None, rightTree = None):
         self.key = key
         self.leftTree = leftTree
         self.rightTree = rightTree
@@ -38,26 +41,18 @@ class BinaryTree:
             t =BinaryTree(key)
             self.rightTree , t.rightTree = t, self.rightTree
     
+    # def printPreorder(self, level):
+    #     print( str(level*'.') + str(self.key))
+    #     if self.leftTree != None:
+    #         self.leftTree.printPreorder(level+1)
+    #     if self.rightTree != None:
+    #         self.rightTree.printPreorder(level+1) 
+    
     def printPreorder(self, level):
-        print( str(level*'-') + str(self.key))
-        if self.leftTree != None:
-            self.leftTree.printPreorder(level+1)
         if self.rightTree != None:
             self.rightTree.printPreorder(level+1)
-    
-
-'''
-Main Program:
-leftTree = BinaryTree('Chapter 1',
-BinaryTree('Section 1.1'),
-BinaryTree('Section 1.2',
-BinaryTree('Section 1.2.1'),
-None))
-rightTree = BinaryTree('Chapter 2',
-BinaryTree('Section 2.1'),
-BinaryTree('Section 2.2',
-BinaryTree('Section 2.2.1'),
-BinaryTree('Section 2.2.2')) )
-tree = BinaryTree('Contents', leftTree, rightTree)
-tree.printPreorder(0)
-'''
+        print(str(level*'.') + str(self.key))
+        if self.leftTree != None:
+            self.leftTree.printPreorder(level+1)
+        if self.rightTree == None or self.leftTree==None:
+            print('hi')

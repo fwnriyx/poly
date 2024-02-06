@@ -12,73 +12,85 @@ class HashTable:
             return 0
         return sum(ord(char) for char in key) % current_size
 
-    # def rehashFunction(self, oldHash):
-    #     return (oldHash + 1) % self.size
+    def rehashFunction(self, oldHash):
+        return (oldHash + 1) % self.size
 
-    def rehashFunction(self, oldHash, attempt):
-        return (oldHash + attempt) % self.size
+    # def rehashFunction(self, oldHash, attempt):
+    #     return (oldHash + attempt) % self.size
 
     def _resize_and_rehash(self):
-        new_size = self.size * 2
+        new_size = self.size * 2 
         new_keys = [None] * new_size
         new_buckets = [None] * new_size
 
         # Use a while loop to ensure all non-empty buckets are processed
         index = 0
         while index < self.size:
-            if self.keys[index] is not None:
+            if self.keys[index] is not None: # a key exists
                 # new_index = self.hashFunction(self.keys[index], self.size)  # Use the new size for hashing
-                new_index = self.hashFunction(self.keys[index], new_size)
-                attempt = 1
-                # while new_buckets[new_index] is not None:
-                #     print("Collision")
-                #     new_index = self.rehashFunction(new_index)
-                while new_buckets[new_index] is not None:
-                    print("Collision")
-                    new_index = self.rehashFunction(new_index, attempt)
-                    attempt += 1
+                new_index = self.hashFunction(self.keys[index], new_size) #get new index for this key using the new size
+                condition = True
+                while condition:
+                    # use bucket if empty
+                    if new_buckets[new_index] == None:
+                        # set the bucket by indexing the old bucket 
+                        new_buckets[new_index] = self.buckets[index] 
+                        condition = False # break the loop when bucket is found
+                    else: # look for another available bucket
+                        new_index = self.rehashFunction(new_index)
+                        condition = True # run the loop again
                 new_keys[new_index] = self.keys[index]
                 new_buckets[new_index] = self.buckets[index]
             index += 1
 
-        self.size = new_size  # Update the hash table size
+        # Update the hash table 
+        self.size = new_size  
         self.keys = new_keys
         self.buckets = new_buckets
 
     def __setitem__(self, key, value):
         index = self.hashFunction(key, self.size)
         startIndex = index
-        attempt = 1
         while True:
+            # Set new or replace existing key
             if self.keys[index % self.size] is None or self.keys[index % self.size] == key:
                 self.buckets[index % self.size] = value
                 self.keys[index % self.size] = key
                 break
-            else:
-                index = self.rehashFunction(index, attempt)
-                attempt += 1
-                if index == startIndex:
-                    # Resize the hash table if necessary
-                    if sum(bucket is not None for bucket in self.buckets) >= self.size:
+            else: 
+                index = self.rehashFunction(index) # rehash and try to find empty bucket 
+                if index == startIndex: # if there is no space, enter this condition
+                    # Resize the hash table
+                    # if sum(bucket is not None for bucket in self.buckets) >= self.size:
                         self._resize_and_rehash()
+                        
                         # Recalculate the index using the new size
                         index = self.hashFunction(key, self.size)
-                        #insert the key and value
-                        self.buckets[index % self.size] = value
-                        self.keys[index % self.size] = key
+                                                    
+                        # insert the key and value
+                        # there will definitely be space in this new hashtable
+                        condition = True
+                        while condition:
+                            # if new resized hashtable bucket is empty use it
+                            if self.buckets[index] == None: 
+                                self.buckets[index] = value
+                                self.keys[index] = key
+                                condition = False # break loop when bucket found
+                            else: #don't need to handle same key as handled above already
+                                index = self.rehashFunction(index)
+                                condition = True #continue loop/rehashing until bucket found
                         break
 
     def __getitem__(self, key):
         index = self.hashFunction(key, self.size)
-        startIndex = index
-        attempt = 1
+        count = 0
         while True:
             if self.keys[index % self.size] == key:
                 return self.buckets[index % self.size]
             else:
-                index = self.rehashFunction(startIndex, attempt)
-                attempt += 1
-                if index == startIndex:
+                index = self.rehashFunction(index)
+                count += 1
+                if count == self.size:
                     return None
 
 
@@ -86,7 +98,8 @@ def tokenize_expression(exp):
     # Use regular expression to tokenize the expression
     # \d+ is one or more digits, \. is a literal dot, \S is one or more non-whitespace characters and | is an OR operator, [a-zA-Z]+ is one or more letters
     pattern = r'\d+\.\d+|\d+|[a-zA-Z]+|\S'
-    return re.findall(pattern, exp)
+    print(re.findall(pattern, exp))
+    return re.findall(pattern, exp)                
 
 def exponentConverter(splitExp):
     #This helps to display the exponent in the correct format, as well as solve it correctly
@@ -142,7 +155,7 @@ class Stack:
 
 # Binary Tree Class
 class BinaryTree:
-    def __init__(self,key, leftTree = None, rightTree = None):
+    def __init__(self, key, leftTree = None, rightTree = None):
         self.key = key
         self.leftTree = leftTree
         self.rightTree = rightTree
@@ -178,9 +191,10 @@ class BinaryTree:
         if self.leftTree != None:
             self.leftTree.printPreorder(level+1)
         if self.rightTree != None:
-            self.rightTree.printPreorder(level+1)
+            self.rightTree.printPreorder(level+1)        
+          
 
-# Parse Tree Builder and Solver
+# # Parse Tree Builder and Solver
 def buildParseTree(exp):
         # tokens = exp.split()
         tokens = tokenize_expression(exp)
@@ -209,9 +223,10 @@ def buildParseTree(exp):
                     
         # RULE 3: If token is number, set key of the current node
         # to that number and return to parent
-            elif t not in ['+', '-', '*', '/', ')', '**'] :
+            elif t not in ['+', '-', '*', '/', ')', '**']:
                 try:
                     currentTree.setKey(float(t))
+                    # print(currentTree.getKey())
                     parent = stack.pop()
                     currentTree = parent
                 except ValueError:
@@ -230,41 +245,124 @@ def evaluateParseTree(tree, hashtable):
         leftTree = tree.getLeftTree()
         rightTree = tree.getRightTree()
         op = tree.getKey()
+        
         if leftTree != None and rightTree != None:
-            try:
-                if op == '+':
+            print(leftTree.getKey())
+            print(rightTree.getKey())
+            # Replace left tree and right tree if they are variables
+            if str(leftTree.getKey()).isalpha():
+                try:
+                    eqn = hashtable[leftTree.getKey()]
+                    new_tree = buildParseTree(eqn)
+                    new_key = evaluateParseTree(new_tree, hashtable)
+                    leftTree.setKey(new_key)
+                except TypeError:
+                    return None
+            elif str(rightTree.getKey()).isalpha():
+                try:
+                    eqn = hashtable[rightTree.getKey()]
+                    new_tree = buildParseTree(eqn)
+                    new_key = evaluateParseTree(new_tree, hashtable)
+                    rightTree.setKey(new_key)
+                except TypeError:
+                    return None
+            
+            # Evaluate Parse Tree  
+            if op == '+':
+                try:
                     return evaluateParseTree(leftTree, hashtable) + evaluateParseTree(rightTree, hashtable)
-                elif op == '**':
+                except TypeError:
+                    return None
+            elif op == '**':
+                try:
                     return evaluateParseTree(leftTree, hashtable) ** evaluateParseTree(rightTree, hashtable)
-                elif op == '-':
+                except TypeError:
+                    return None
+            elif op == '-':
+                try:
+                    # a = evaluateParseTree(leftTree, hashtable)
+                    # b = evaluateParseTree(rightTree, hashtable)
+                    # print(a, type(a))
+                    # print(b, type(b))
                     return evaluateParseTree(leftTree, hashtable) - evaluateParseTree(rightTree, hashtable)
-                elif op == '*':
+                except TypeError as t:
+                    return print(t)
+            elif op == '*':
+                try:
                     return evaluateParseTree(leftTree, hashtable) * evaluateParseTree(rightTree, hashtable)
-                elif op == '/':
+                except TypeError:
+                    return None
+            elif op == '/':
+                try:
                     return evaluateParseTree(leftTree, hashtable) / evaluateParseTree(rightTree, hashtable)
-            except TypeError:
-                if isinstance(tree.getKey(), str):
-                    variable_value = hashtable[tree.getKey()]
-                    if variable_value is not None or tree.getKey() in hashtable.keys:
-                        return variable_value
+                except TypeError:
+                    return None
         else:
             return tree.getKey()
 
-exp = 'A=(2*(2*2))'
-exp1 = 'B=(2*10)'
-exp2 = 'C=(2+6.4)'
-exp3 = 'D=(4+(5+6))'
-exp4 = 'E=(2**6.4)'
+# exp = 'A=(2**2)' # 4
+# exp1 = 'Balls=(A+1)' # 5
+# exp2 = 'Can=(Balls**A)' # 5^4 = 625
+# exp3 = 'D=(4+(5+6))'
+# exp4 = 'E=(2**6.4)'
+
+# WHY DOES a=(2+3) get removed?
+mango = 'Mango=((Apple+(Durian+(Pear*(Blueberry*(Coconut/Strawberry)))))/2)'
+# exp = 'a=(2+3)'
+# exp1 = 'bc=(a*3)'
+# exp2 = 'abc=(a+(bc/2))'
+# exp3 = 'D=(4+(5+6))'
+# exp4 = 'E=(2**6.4)'
+
+# a = 'Mango=((Apple+(Durian+(Pear*(Blueberry*(Coconut/Strawberry)))))/2)'
+# b = 'a=(2+3)'
+# c = 'bc=(a*3)'
+
+# a = 'a=((Apple+(Durian+(Pear*(Blueberry*(Coconut/Strawberry)))))/2)'
+# b = 'b=(2+3)'
+# c = 'c=(a*3)'
+
+# a = 'a=(1+2)'
+# b = 'b=(1+2)'
+# c = 'c=(1+2)'
+# d = 'd=(1+2)'
+# e = 'e=(1+2)'
+# f = 'f=(1+2)'
+# g = 'g=(1+2)'
+# h = 'h=(1+2)'
+
+a = 'a=(5-5)'
+# a = 'a=(1-mango)'
+
 
 eqn_table = HashTable(1)
 
-for e in [exp, exp1, exp2, exp3, exp4]:
-    eq_idx = e.index("=")  # get idx of equal
-    variable = e[:eq_idx]
-    equation = e[eq_idx + 1:]
+# print()
 
-    tree = buildParseTree(equation)
-    eqn_table[variable] = equation
-    print(variable, equation)
-    print(f'The expression: {e} evaluates to: {evaluateParseTree(tree, eqn_table)}')
-    print(f"This is the hashtable: {eqn_table.keys} => {eqn_table.buckets}")
+# # for e in [mango, exp, exp1]:
+# for e in [a]:
+#     eq_idx = e.index("=")  # get idx of equal
+#     variable = e[:eq_idx]
+#     equation = e[eq_idx + 1:]
+
+#     tree = buildParseTree(equation)
+    # eqn_table[variable] = equation
+    # tree.printPreorder(0)
+    # print(variable, equation)
+    # # print(f'\nThe expression: {e} evaluates to: {evaluateParseTree(tree, eqn_table)}')
+    # print(f"This is the hashtable: {eqn_table.keys} => {eqn_table.buckets}\n")
+
+# for e in [a]:
+#     eq_idx = e.index("=")  # get idx of equal
+#     variable = e[:eq_idx]
+#     equation = e[eq_idx + 1:]
+
+#     # tree = ParseTree(equation)
+#     eqn_table[variable] = equation
+    
+#     tree.buildParseTree()
+    
+#     print(tree.printPreorder(0))
+#     # print(tree.evaluateParseTree)
+#     # print(f'\nThe expression: {e} evaluates to: {evaluateParseTree(tree, eqn_table)}')
+#     # print(f"This is the hashtable: {eqn_table.keys} => {eqn_table.buckets}\n")
