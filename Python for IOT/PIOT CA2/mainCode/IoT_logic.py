@@ -9,18 +9,17 @@ import json
 import telegram
 from PIL import Image
 from io import BytesIO
+from dht11_example import DHT11
 
 
-THINGSPEAK_API_KEY = "5ZOKFO77QKJUJ1MB"
 # Constants for keypad and RFID modes
-KEYPAD_MODE = 1
-RFID_MODE = 2
+RFID_MODE = 1
+FITNESS_MODE = 2
 
 #Camera
 camera = PiCamera()
 current_dir = os.getcwd()
 
-# Initialize variables
 mode = ''
 buzzer = 18
 counter = 0
@@ -30,7 +29,6 @@ auth = []
 # LCD
 LCD = I2C_LCD_driver.lcd()
 
-#GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
@@ -62,32 +60,15 @@ for j in range(4):
 GPIO.setup(buzzer, GPIO.OUT)
 reader = SimpleMFRC522()
 
-
 # Read RFID database
 with open("authlist.txt", "r") as f:
     auth = f.read().splitlines()
 
-def upload_to_thingspeak(steps, humidity, temperature, heart_rate):
-    endpoint = f'https://api.thingspeak.com/update?api_key={THINGSPEAK_API_KEY}'
-
-    # Prepare the data payload
-    payload = {
-        'field1': steps,
-        'field2': humidity,
-        'field3': temperature,
-        'field4': heart_rate
-    }
-
-    # Make the HTTP request to upload data
-    response = requests.post(endpoint, params=payload)
-
-    # Print the response (for debugging purposes)
-    print(response.text)
-
-def fitness_tracker(secretkey):
+def keypad_entry(secretkey):
     print(secretkey)
     global num, counter
     LCD.lcd_clear()
+    LCD.lcd_display_string('Enter pass:', 1)
     while counter == 0:  # Wait until the complete password is entered
         for i in range(3):  # Loop through all columns
             GPIO.output(COL[i], 0)  # Pull one column pin low
@@ -110,7 +91,7 @@ def fitness_tracker(secretkey):
         PWM.start(3) #13% duty cycle
         print('Unlocked')
         LCD.lcd_clear()
-        LCD.lcd_display_string('Unlocked!', 1)
+        LCD.lcd_display_string('Logged in!', 1)
         sleep(2) #allow time for movement
         PWM.start(12) #13% duty cycle
         sleep(2)
@@ -164,17 +145,17 @@ def get_keypad_input():
 
 while True:
     LCD.lcd_clear()
-    LCD.lcd_display_string('Enter 1 for keypad', 1, 0)
-    LCD.lcd_display_string('Enter 2 for RFID', 2, 0)
+    LCD.lcd_display_string('Enter 1 for RFID', 1, 0)
+    LCD.lcd_display_string('Enter 2 for Fitness mode', 2, 0)
     choice = None
     while not choice:
         choice = get_keypad_input()
     if choice == 1:
-        mode = KEYPAD_MODE
-    elif choice == 2:
         mode = RFID_MODE
+    elif choice == 2:
+        mode = FITNESS_MODE
 
-    if mode == KEYPAD_MODE:
+    if mode == FITNESS_MODE:
         # data from thingspeak
         resp = requests.get("https://api.thingspeak.com\
 /channels/2154521/fields/4.json?api_key=M2U4OL8SE4EJFLWV&results=1")
@@ -194,25 +175,3 @@ while True:
             keypad_entry(password)
     elif mode == RFID_MODE:
         rfid_entry()
-    camera.capture(current_dir + "/static/intruderimage.jpg")
-    img_path = current_dir + "/static/intruderimage.jpg"
-    sleep(5)
-    # send img to tele
-    TOKEN = "6044657815:AAGGrGvHPIDhKiayFyuNxmEUrjnVGTfGz3Y"
-    chat_id = "837915524"
-    message = "A user has opened door"
-    # send message
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
-    requests.get(url).json()
-    # send img
-    img = Image.open(img_path)
-    
-    image_stream = BytesIO()
-    img.save(image_stream, format='JPEG')
-    image_stream.seek(0)
-    
-    
-    url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
-    files = {'photo': (img_path, image_stream)}
-    data = {'chat_id': chat_id}
-    requests.post(url, files=files, data=data).json()

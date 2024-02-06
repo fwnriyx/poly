@@ -54,5 +54,14 @@ def signup():
 def viewdata():
     return render_template('data.html', methods=["GET"])
 
+@app.route('/update_thingspeak', methods=['POST'])
+def update_thingspeak():
+    data = request.get_json()
+    heart_rate = data.get('heart_rate')
+    steps = data.get('steps')
+    temperature = data.get('temperature')
+    humidity = data.get('humidity')
+    dist_travelled = data.get('dist_travelled')
+
 if __name__ == "__main__":
     app.run(debug = True, host = "0.0.0.0")

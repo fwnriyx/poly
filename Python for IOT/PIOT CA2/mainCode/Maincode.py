@@ -2,29 +2,18 @@ import RPi.GPIO as GPIO
 import I2C_LCD_driver
 from time import sleep
 from mfrc522 import SimpleMFRC522
-from picamera import PiCamera
-import os
-import requests
-import json
-import telegram
-from PIL import Image
-from io import BytesIO
 
-
-THINGSPEAK_API_KEY = "5ZOKFO77QKJUJ1MB"
 # Constants for keypad and RFID modes
 KEYPAD_MODE = 1
 RFID_MODE = 2
-
-#Camera
-camera = PiCamera()
-current_dir = os.getcwd()
+RUN_MODE = 3
 
 # Initialize variables
 mode = ''
 buzzer = 18
 counter = 0
 num = ''
+secretkey = '123456'
 auth = []
 
 # LCD
@@ -33,13 +22,6 @@ LCD = I2C_LCD_driver.lcd()
 #GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-
-#servo motor
-GPIO.setmode(GPIO.BCM) #choose BCM mode
-GPIO.setwarnings(False)
-GPIO.setup(26,GPIO.OUT) #set GPIO 26 as output
-
-PWM=GPIO.PWM(26,50) #set 50Hz PWM output at GPIO26
 
 # Keypad setup
 MATRIX = [[1, 2, 3],
@@ -67,27 +49,10 @@ reader = SimpleMFRC522()
 with open("authlist.txt", "r") as f:
     auth = f.read().splitlines()
 
-def upload_to_thingspeak(steps, humidity, temperature, heart_rate):
-    endpoint = f'https://api.thingspeak.com/update?api_key={THINGSPEAK_API_KEY}'
-
-    # Prepare the data payload
-    payload = {
-        'field1': steps,
-        'field2': humidity,
-        'field3': temperature,
-        'field4': heart_rate
-    }
-
-    # Make the HTTP request to upload data
-    response = requests.post(endpoint, params=payload)
-
-    # Print the response (for debugging purposes)
-    print(response.text)
-
-def fitness_tracker(secretkey):
-    print(secretkey)
-    global num, counter
+def keypad_entry():
+    global num, counter, secretkey
     LCD.lcd_clear()
+    LCD.lcd_display_string('Enter pass:', 1)
     while counter == 0:  # Wait until the complete password is entered
         for i in range(3):  # Loop through all columns
             GPIO.output(COL[i], 0)  # Pull one column pin low
@@ -105,15 +70,10 @@ def fitness_tracker(secretkey):
             GPIO.output(COL[i], 1)  # Write back default value of 1
 
     # At this point, the complete password has been entered
-    
-    if int(num) == secretkey:
-        PWM.start(3) #13% duty cycle
+    if num == secretkey:
         print('Unlocked')
         LCD.lcd_clear()
         LCD.lcd_display_string('Unlocked!', 1)
-        sleep(2) #allow time for movement
-        PWM.start(12) #13% duty cycle
-        sleep(2)
     else:
         print('Wrong password. Try again')
         LCD.lcd_clear()
@@ -136,11 +96,6 @@ def rfid_entry():
         GPIO.output(buzzer, GPIO.HIGH)
         sleep(0.5)
         GPIO.output(buzzer, GPIO.LOW)
-        PWM.start(3)
-        sleep(2) #allow time for movement
-        PWM.start(12) #13% duty cycle
-        sleep(2)
-        
     else:
         print("Card with UID", id, "not found in database; access denied")
         LCD.lcd_clear()
@@ -175,44 +130,6 @@ while True:
         mode = RFID_MODE
 
     if mode == KEYPAD_MODE:
-        # data from thingspeak
-        resp = requests.get("https://api.thingspeak.com\
-/channels/2154521/fields/4.json?api_key=M2U4OL8SE4EJFLWV&results=1")
-        result = json.loads(resp.text)
-        lockMode = result["feeds"][0]["field4"]
-        lockMode = int(lockMode)
-        print(lockMode)
-        
-        if lockMode == 1:
-            resp = requests.get("https://api.thingspeak.com\
-/channels/2154521/fields/3.json?api_key=M2U4OL8SE4EJFLWV&results=1")
-            result = json.loads(resp.text)
-            otp = int(result["feeds"][0]["field3"])
-            keypad_entry(otp)
-        elif lockMode == 2:
-            password = 12345
-            keypad_entry(password)
+        keypad_entry()
     elif mode == RFID_MODE:
         rfid_entry()
-    camera.capture(current_dir + "/static/intruderimage.jpg")
-    img_path = current_dir + "/static/intruderimage.jpg"
-    sleep(5)
-    # send img to tele
-    TOKEN = "6044657815:AAGGrGvHPIDhKiayFyuNxmEUrjnVGTfGz3Y"
-    chat_id = "837915524"
-    message = "A user has opened door"
-    # send message
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
-    requests.get(url).json()
-    # send img
-    img = Image.open(img_path)
-    
-    image_stream = BytesIO()
-    img.save(image_stream, format='JPEG')
-    image_stream.seek(0)
-    
-    
-    url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
-    files = {'photo': (img_path, image_stream)}
-    data = {'chat_id': chat_id}
-    requests.post(url, files=files, data=data).json()
