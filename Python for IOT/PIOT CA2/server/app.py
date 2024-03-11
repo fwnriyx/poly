@@ -1,32 +1,47 @@
-from flask import Flask
-from flask import Blueprint, render_template, request, redirect, url_for
-from flask_login import UserMixin
+from flask import Flask, Blueprint, render_template, request, jsonify, url_for, redirect
+import requests
+from datetime import datetime
 
-app = Blueprint('app', __name__)
+app = Flask(__name__)
 
-def upload_data(filepath: str, data: any):
-  with open(filepath, "w") as f:
-    f.write(f"{data}")
-    return
-  
+user_info = {
+   "username": "test",
+   "password": "123"
+}
 
-class User(UserMixin):
+class User:
     def __init__(self, username):
         self.username = username
     
     def get_id(self):
         return self.username
-    
-#Only will have 1 user connected to a band at a time
 
-userInfo = {
-   "username": "test",
-   "password": "123"
-}
+def fetch_data(channel_id, api_key, field_num):
+    url = f'https://api.thingspeak.com/channels/{channel_id}/feeds.json?api_key={api_key}&field{field_num}=true'
 
-@app.route("/")
-def index():
-    return render_template('home.html', methods=["GET"])
+    # Fetch data
+    response = requests.get(url)
+    data = response.json()
+    print(data)
+    assert response.status_code == 200
+
+    # Extract relevant information from the response and convert to integers
+    field_data = []
+    for entry in data['feeds']:
+        if entry[f'field{field_num}'] is not None:
+            try:
+                value = float(entry[f'field{field_num}'])
+                field_data.append(value)
+            except ValueError:
+                # Handle the case where the value is not convertible to an integer
+                pass
+
+    return field_data
+
+
+@app.route("/", methods=["GET"])
+def index_page():
+    return render_template('index.html')
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -34,34 +49,40 @@ def login():
     if request.method == "POST":
         user = request.form["username"]
         password = request.form["password"]
-        if user == userInfo["username"]:
-            #Since this project doesn't require a database,
-            #we will just be referring to the test user info.
-            #In a real situation, we would use an sql database in order to 
-            #store users and passwords, and connecting to the input to check.
-            if password == userInfo["password"]:
-                userObj = User(username = userInfo["username"])
-                return render_template('home.html', methods=["GET"])
+        # print(user, password)
+        # print(user_info["username"], user_info["password"])
+        if user == user_info["username"]:
+            print("hello")
+            if password == user_info["password"]:
+                print("hellllllooooooo")
+                # user_obj = User(username=user_info["username"])
+                return redirect(url_for("viewdata"))
             else:
                 error = "Invalid username or password"
-        return render_template('login.html', error = error)
+        else:
+            error = "Invalid username or password"
+    return render_template('login.html', error=error)
 
-@app.route("/signup", methods=["GET", "POST"])
-def signup():
-    return render_template('signup.html', methods=["GET"])
 
-@app.route("/viewdata", methods=["GET", "POST"])
+@app.route("/viewdata", methods=["GET"])
 def viewdata():
-    return render_template('data.html', methods=["GET"])
+    channel_id = 2406556
+    api_key = 'FPC7UEB6NHIZXH0O'
 
-@app.route('/update_thingspeak', methods=['POST'])
-def update_thingspeak():
-    data = request.get_json()
-    heart_rate = data.get('heart_rate')
-    steps = data.get('steps')
-    temperature = data.get('temperature')
-    humidity = data.get('humidity')
-    dist_travelled = data.get('dist_travelled')
+    # Fetch and clean data for each field
+    field1_data = fetch_data(channel_id, api_key, 1)
+    field2_data = fetch_data(channel_id, api_key, 2)
+    field3_data = fetch_data(channel_id, api_key, 3)
+    field4_data = fetch_data(channel_id, api_key, 4)
+    field5_data = fetch_data(channel_id, api_key, 5)
+
+    return render_template('data.html',
+                           title='View Data',
+                           field1_data=field1_data,
+                           field2_data=field2_data,
+                           field3_data=field3_data,
+                           field4_data=field4_data,
+                           field5_data=field5_data)
 
 if __name__ == "__main__":
-    app.run(debug = True, host = "0.0.0.0")
+    app.run(debug=True, host="0.0.0.0")

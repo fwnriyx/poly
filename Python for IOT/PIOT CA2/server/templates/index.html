@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        nav {
+            text-align: left;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Fitness Tracker</h1>
+    </header>
+
+    <nav>
+        <a href={{ url_for('viewdata') }} >View Data</a>
+    </nav>
+
+    <main>
+        <p>
+            Thank you for choosing Fitness Tracker! Our goal is to help you achieve your fitness objectives and maintain a healthy lifestyle.
+        </p>
+
+        <p>
+            Fitness Tracker integrates various sensors to provide real-time data about your physical activities, including steps taken, heart rate, and environmental conditions. Whether you are a fitness enthusiast or someone looking to kickstart a healthier routine, our system is designed to assist you on your fitness journey.
+        </p>
+
+        <p>
+            Our device combines the power of RFID technology and fitness tracking capabilities. Use RFID for secure access control, and delve into fitness mode to monitor your exercise metrics and environmental factors. Stay connected with your progress through our cloud integration, allowing you to track and analyze your fitness data over time.
+        </p>
+
+        <p>
+            Get ready to embark on a fitness adventure with Fitness Tracker. Let's achieve those fitness goals together!
+        </p>
+    </main>
+
+</body>
+</html>

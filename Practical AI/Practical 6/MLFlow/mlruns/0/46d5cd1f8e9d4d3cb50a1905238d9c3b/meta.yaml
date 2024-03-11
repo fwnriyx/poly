@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Fitri/OneDrive/Documents/GitHub/poly/Practical%20AI/Practical%206/MLFlow/mlruns/0/46d5cd1f8e9d4d3cb50a1905238d9c3b/artifacts
+end_time: 1705470116344
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 46d5cd1f8e9d4d3cb50a1905238d9c3b
+run_name: popular-wasp-962
+run_uuid: 46d5cd1f8e9d4d3cb50a1905238d9c3b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1705470112560
+status: 3
+tags: []
+user_id: Fitri

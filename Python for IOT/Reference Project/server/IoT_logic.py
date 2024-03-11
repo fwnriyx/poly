@@ -11,13 +11,12 @@ from PIL import Image
 from io import BytesIO
 
 
-THINGSPEAK_API_KEY = "5ZOKFO77QKJUJ1MB"
 # Constants for keypad and RFID modes
 KEYPAD_MODE = 1
 RFID_MODE = 2
 
 #Camera
-camera = PiCamera()
+# camera = PiCamera()
 current_dir = os.getcwd()
 
 # Initialize variables
@@ -67,27 +66,11 @@ reader = SimpleMFRC522()
 with open("authlist.txt", "r") as f:
     auth = f.read().splitlines()
 
-def upload_to_thingspeak(steps, humidity, temperature, heart_rate):
-    endpoint = f'https://api.thingspeak.com/update?api_key={THINGSPEAK_API_KEY}'
-
-    # Prepare the data payload
-    payload = {
-        'field1': steps,
-        'field2': humidity,
-        'field3': temperature,
-        'field4': heart_rate
-    }
-
-    # Make the HTTP request to upload data
-    response = requests.post(endpoint, params=payload)
-
-    # Print the response (for debugging purposes)
-    print(response.text)
-
-def fitness_tracker(secretkey):
+def keypad_entry(secretkey):
     print(secretkey)
     global num, counter
     LCD.lcd_clear()
+    LCD.lcd_display_string('Enter pass:', 1)
     while counter == 0:  # Wait until the complete password is entered
         for i in range(3):  # Loop through all columns
             GPIO.output(COL[i], 0)  # Pull one column pin low
@@ -194,8 +177,8 @@ while True:
             keypad_entry(password)
     elif mode == RFID_MODE:
         rfid_entry()
-    camera.capture(current_dir + "/static/intruderimage.jpg")
-    img_path = current_dir + "/static/intruderimage.jpg"
+    # camera.capture(current_dir + "/static/intruderimage.jpg")
+    # img_path = current_dir + "/static/intruderimage.jpg"
     sleep(5)
     # send img to tele
     TOKEN = "6044657815:AAGGrGvHPIDhKiayFyuNxmEUrjnVGTfGz3Y"

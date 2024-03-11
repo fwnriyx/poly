@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Add some styling for the navigation bar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Add some styling for the content */
+        .content {
+            margin-top: 50px; /* Adjust the margin based on your preference */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+
+    <div class="content">
+        <h1>{{ title }}</h1>
+
+        <!-- Field 1 -->
+        <div>
+            <h2>Heart Rate</h2>
+            <canvas id="field1Chart"></canvas>
+        </div>
+
+        <!-- Field 2 -->
+        <div>
+            <h2>Steps taken</h2>
+            <canvas id="field2Chart"></canvas>
+        </div>
+
+        <!-- Field 3 -->
+        <div>
+            <h2>Temperature</h2>
+            <canvas id="field3Chart"></canvas>
+        </div>
+
+        <!-- Field 4 -->
+        <div>
+            <h2>Humidity</h2>
+            <canvas id="field4Chart"></canvas>
+        </div>
+
+        <!-- Field 5 -->
+        <div>
+            <h2>Distance travelled</h2>
+            <canvas id="field5Chart"></canvas>
+        </div>
+
+        <script>
+            // Function to create a line chart
+            function createLineChart(canvasId, data) {
+                var ctx = document.getElementById(canvasId).getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: Array.from({ length: data.length }, (_, i) => i + 1),
+                        datasets: [{
+                            label: 'Values',
+                            data: data,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: [{
+                                type: 'linear',
+                                position: 'bottom'
+                            }]
+                        }
+                    }
+                });
+            }
+
+            // Call the function for each field
+            createLineChart('field1Chart', {{ field1_data|tojson }});
+            createLineChart('field2Chart', {{ field2_data|tojson }});
+            createLineChart('field3Chart', {{ field3_data|tojson }});
+            createLineChart('field4Chart', {{ field4_data|tojson }});
+            createLineChart('field5Chart', {{ field5_data|tojson }});
+        </script>
+    </div>
+
+</body>
+</html>
