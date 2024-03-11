@@ -1,0 +1,1411 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0916.1526                               -->
+<workbook original-version='18.1' source-build='2022.2.2 (20222.22.0916.1526)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Singapore Housing Dataset' inline='true' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Singapore Housing Dataset' name='textscan.1o8oq0v0ve7v241b48b8c1dgkwcc'>
+            <connection class='textscan' directory='Data/Indiv Project' filename='Singapore Housing Dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1o8oq0v0ve7v241b48b8c1dgkwcc' name='Singapore Housing Dataset.csv' table='[Singapore Housing Dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy-MM' name='month' ordinal='0' />
+            <column datatype='integer' name='year' ordinal='1' />
+            <column datatype='string' name='town' ordinal='2' />
+            <column datatype='integer' name='town_dummy' ordinal='3' />
+            <column datatype='string' name='flat_type' ordinal='4' />
+            <column datatype='integer' name='block' ordinal='5' />
+            <column datatype='string' name='street_name' ordinal='6' />
+            <column datatype='string' name='address' ordinal='7' />
+            <column datatype='real' name='latitude' ordinal='8' />
+            <column datatype='real' name='longitude' ordinal='9' />
+            <column datatype='string' name='storey_range' ordinal='10' />
+            <column datatype='integer' name='storey' ordinal='11' />
+            <column datatype='real' name='area_sqm' ordinal='12' />
+            <column datatype='string' name='flat_model' ordinal='13' />
+            <column datatype='integer' name='lease_start' ordinal='14' />
+            <column datatype='integer' name='lease_rem' ordinal='15' />
+            <column datatype='integer' name='resale_price' ordinal='16' />
+            <column datatype='real' name='price_psm' ordinal='17' />
+            <column datatype='real' name='price_psm_yearly' ordinal='18' />
+            <column datatype='real' name='Core CPI' ordinal='19' />
+            <column datatype='real' name='price cpi_adj' ordinal='20' />
+            <column datatype='real' name='price_psm cpi_adj' ordinal='21' />
+            <column datatype='real' name='bala lease pct' ordinal='22' />
+            <column datatype='real' name='price lease_adj implied' ordinal='23' />
+            <column datatype='real' name='price_psm lease_adj implied' ordinal='24' />
+            <column datatype='real' name='price cpi_lease_adj implied' ordinal='25' />
+            <column datatype='real' name='price_psm cpi_lease_adj implied' ordinal='26' />
+            <column datatype='integer' name='year_gni' ordinal='27' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1o8oq0v0ve7v241b48b8c1dgkwcc' name='Singapore Housing Dataset.csv' table='[Singapore Housing Dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy-MM' name='month' ordinal='0' />
+            <column datatype='integer' name='year' ordinal='1' />
+            <column datatype='string' name='town' ordinal='2' />
+            <column datatype='integer' name='town_dummy' ordinal='3' />
+            <column datatype='string' name='flat_type' ordinal='4' />
+            <column datatype='integer' name='block' ordinal='5' />
+            <column datatype='string' name='street_name' ordinal='6' />
+            <column datatype='string' name='address' ordinal='7' />
+            <column datatype='real' name='latitude' ordinal='8' />
+            <column datatype='real' name='longitude' ordinal='9' />
+            <column datatype='string' name='storey_range' ordinal='10' />
+            <column datatype='integer' name='storey' ordinal='11' />
+            <column datatype='real' name='area_sqm' ordinal='12' />
+            <column datatype='string' name='flat_model' ordinal='13' />
+            <column datatype='integer' name='lease_start' ordinal='14' />
+            <column datatype='integer' name='lease_rem' ordinal='15' />
+            <column datatype='integer' name='resale_price' ordinal='16' />
+            <column datatype='real' name='price_psm' ordinal='17' />
+            <column datatype='real' name='price_psm_yearly' ordinal='18' />
+            <column datatype='real' name='Core CPI' ordinal='19' />
+            <column datatype='real' name='price cpi_adj' ordinal='20' />
+            <column datatype='real' name='price_psm cpi_adj' ordinal='21' />
+            <column datatype='real' name='bala lease pct' ordinal='22' />
+            <column datatype='real' name='price lease_adj implied' ordinal='23' />
+            <column datatype='real' name='price_psm lease_adj implied' ordinal='24' />
+            <column datatype='real' name='price cpi_lease_adj implied' ordinal='25' />
+            <column datatype='real' name='price_psm cpi_lease_adj implied' ordinal='26' />
+            <column datatype='integer' name='year_gni' ordinal='27' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>town</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[town]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>town</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>town_dummy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[town_dummy]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>town_dummy</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flat_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[flat_type]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>flat_type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>block</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[block]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>block</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street_name]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>street_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[address]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>address</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>storey_range</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[storey_range]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>storey_range</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>storey</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[storey]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>storey</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>area_sqm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[area_sqm]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>area_sqm</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>flat_model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[flat_model]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>flat_model</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lease_start</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[lease_start]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>lease_start</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lease_rem</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[lease_rem]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>lease_rem</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resale_price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[resale_price]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>resale_price</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_psm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_psm]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price_psm</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_psm_yearly</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_psm_yearly]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price_psm_yearly</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Core CPI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Core CPI]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>Core CPI</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price cpi_adj</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price cpi_adj]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price cpi_adj</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_psm cpi_adj</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_psm cpi_adj]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price_psm cpi_adj</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bala lease pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bala lease pct]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>bala lease pct</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price lease_adj implied</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price lease_adj implied]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price lease_adj implied</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_psm lease_adj implied</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_psm lease_adj implied]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price_psm lease_adj implied</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price cpi_lease_adj implied</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price cpi_lease_adj implied]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price cpi_lease_adj implied</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_psm cpi_lease_adj implied</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price_psm cpi_lease_adj implied]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>price_psm cpi_lease_adj implied</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_gni</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year_gni]</local-name>
+            <parent-name>[Singapore Housing Dataset.csv]</parent-name>
+            <remote-alias>year_gni</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Fits Budget' datatype='string' name='[Calculation_2476698355450146816]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF AVG ([resale_price]) &gt; 300000 THEN&#13;&#10;&quot;Above budget&quot; ELSE &quot;Fits &#13;&#10;Budget&quot; END' />
+      </column>
+      <column datatype='real' name='[Core CPI]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Singapore Housing Dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[Singapore Housing Dataset.csv_5131CAF44C614BA7BAFF0E2E1F93CCC7]' role='measure' type='quantitative' />
+      <column caption='Address' datatype='string' name='[address]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='Area Sqm' datatype='real' name='[area_sqm]' role='measure' type='quantitative' />
+      <column caption='Bala Lease Pct' datatype='real' name='[bala lease pct]' role='measure' type='quantitative' />
+      <column caption='Block' datatype='integer' name='[block]' role='measure' type='quantitative' />
+      <column caption='Flat Model' datatype='string' name='[flat_model]' role='dimension' type='nominal' />
+      <column caption='Flat Type' datatype='string' name='[flat_type]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Lease Rem' datatype='integer' name='[lease_rem]' role='measure' type='quantitative' />
+      <column caption='Lease Start' datatype='integer' name='[lease_start]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Month' datatype='date' name='[month]' role='dimension' type='ordinal' />
+      <column caption='Price Cpi Adj' datatype='real' name='[price cpi_adj]' role='measure' type='quantitative' />
+      <column caption='Price Cpi Lease Adj Implied' datatype='real' name='[price cpi_lease_adj implied]' role='measure' type='quantitative' />
+      <column caption='Price Lease Adj Implied' datatype='real' name='[price lease_adj implied]' role='measure' type='quantitative' />
+      <column caption='Price Psm Cpi Adj' datatype='real' name='[price_psm cpi_adj]' role='measure' type='quantitative' />
+      <column caption='Price Psm Cpi Lease Adj Implied' datatype='real' name='[price_psm cpi_lease_adj implied]' role='measure' type='quantitative' />
+      <column caption='Price Psm Lease Adj Implied' datatype='real' name='[price_psm lease_adj implied]' role='measure' type='quantitative' />
+      <column caption='Price Psm' datatype='real' name='[price_psm]' role='measure' type='quantitative' />
+      <column caption='Price Psm Yearly' datatype='real' name='[price_psm_yearly]' role='measure' type='quantitative' />
+      <column caption='Resale Price' datatype='integer' name='[resale_price]' role='measure' type='quantitative' />
+      <column caption='Storey' datatype='integer' name='[storey]' role='measure' type='quantitative' />
+      <column caption='Storey Range' datatype='string' name='[storey_range]' role='dimension' type='nominal' />
+      <column caption='Street Name' datatype='string' name='[street_name]' role='dimension' type='nominal' />
+      <column caption='Town' datatype='string' name='[town]' role='dimension' type='nominal' />
+      <column caption='Town Dummy' datatype='integer' name='[town_dummy]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Year Gni' datatype='integer' name='[year_gni]' role='dimension' type='quantitative' />
+      <column-instance column='[Core CPI]' derivation='Avg' name='[avg:Core CPI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resale_price]' derivation='Avg' name='[avg:resale_price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Core CPI]' derivation='Count' name='[cnt:Core CPI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Core CPI]' derivation='CountD' name='[ctd:Core CPI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Core CPI]' derivation='Sum' name='[sum:Core CPI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resale_price]' derivation='Sum' name='[sum:resale_price:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Flat Type)' hidden='true' name='[Action (Flat Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[flat_type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Street Name,Town)' hidden='true' name='[Action (Street Name,Town)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[street_name]' />
+          <groupfilter function='level-members' level='[town]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:Core CPI:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[cnt:Core CPI:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[ctd:Core CPI:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[sum:Core CPI:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[sum:resale_price:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Singapore&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Singapore Housing Dataset.csv' id='Singapore Housing Dataset.csv_5131CAF44C614BA7BAFF0E2E1F93CCC7'>
+            <properties context=''>
+              <relation connection='textscan.1o8oq0v0ve7v241b48b8c1dgkwcc' name='Singapore Housing Dataset.csv' table='[Singapore Housing Dataset#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' date-parse-format='yyyy-MM' name='month' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='string' name='town' ordinal='2' />
+                  <column datatype='integer' name='town_dummy' ordinal='3' />
+                  <column datatype='string' name='flat_type' ordinal='4' />
+                  <column datatype='integer' name='block' ordinal='5' />
+                  <column datatype='string' name='street_name' ordinal='6' />
+                  <column datatype='string' name='address' ordinal='7' />
+                  <column datatype='real' name='latitude' ordinal='8' />
+                  <column datatype='real' name='longitude' ordinal='9' />
+                  <column datatype='string' name='storey_range' ordinal='10' />
+                  <column datatype='integer' name='storey' ordinal='11' />
+                  <column datatype='real' name='area_sqm' ordinal='12' />
+                  <column datatype='string' name='flat_model' ordinal='13' />
+                  <column datatype='integer' name='lease_start' ordinal='14' />
+                  <column datatype='integer' name='lease_rem' ordinal='15' />
+                  <column datatype='integer' name='resale_price' ordinal='16' />
+                  <column datatype='real' name='price_psm' ordinal='17' />
+                  <column datatype='real' name='price_psm_yearly' ordinal='18' />
+                  <column datatype='real' name='Core CPI' ordinal='19' />
+                  <column datatype='real' name='price cpi_adj' ordinal='20' />
+                  <column datatype='real' name='price_psm cpi_adj' ordinal='21' />
+                  <column datatype='real' name='bala lease pct' ordinal='22' />
+                  <column datatype='real' name='price lease_adj implied' ordinal='23' />
+                  <column datatype='real' name='price_psm lease_adj implied' ordinal='24' />
+                  <column datatype='real' name='price cpi_lease_adj implied' ordinal='25' />
+                  <column datatype='real' name='price_psm cpi_lease_adj implied' ordinal='26' />
+                  <column datatype='integer' name='year_gni' ordinal='27' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_154180B8137B4FCBA510D4ACA3ADAFCC]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 2' type='sheet' worksheet='Areas within Budget' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 2' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_CA31B24CBFBD4202BC3D8EFB889EDD9F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 2' type='sheet' worksheet='Average Price (Flat)' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 2' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_60A91FFC03A94A6F911A0E8E0F26C1C0]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 2' type='sheet' worksheet='HDB Areas' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 2' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Areas within Budget'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='22'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd'>
+            <column caption='Fits Budget' datatype='string' name='[Calculation_2476698355450146816]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF AVG ([resale_price]) &gt; 300000 THEN&#13;&#10;&quot;Above budget&quot; ELSE &quot;Fits &#13;&#10;Budget&quot; END' />
+            </column>
+            <column-instance column='[resale_price]' derivation='Avg' name='[avg:resale_price:qk]' pivot='key' type='quantitative' />
+            <column caption='Flat Type' datatype='string' name='[flat_type]' role='dimension' type='nominal' />
+            <column-instance column='[town]' derivation='None' name='[none:town:nk]' pivot='key' type='nominal' />
+            <column caption='Resale Price' datatype='integer' name='[resale_price]' role='measure' type='quantitative' />
+            <column caption='Street Name' datatype='string' name='[street_name]' role='dimension' type='nominal' />
+            <column caption='Town' datatype='string' name='[town]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2476698355450146816]' derivation='User' name='[usr:Calculation_2476698355450146816:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Flat Type)]'>
+            <groupfilter function='member' level='[flat_type]' member='&quot;4 ROOM&quot;' user:ui-action-filter='[Action2_CA31B24CBFBD4202BC3D8EFB889EDD9F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Street Name,Town)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_60A91FFC03A94A6F911A0E8E0F26C1C0]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[street_name]' />
+              <groupfilter function='level-members' level='[town]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[usr:Calculation_2476698355450146816:nk]' member='&quot;Above budget&quot;' />
+              <groupfilter function='member' level='[usr:Calculation_2476698355450146816:nk]' member='&quot;Fits &#13;&#10;Budget&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:town:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]</column>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Street Name,Town)]</column>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Flat Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height-header' value='18' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' palette='orange_blue_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#aaaaff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline0' label-type='none' paired-distribution-id='refline1' probability='95' scope='per-pane' show-lines='both' symmetric='false' value-column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' z-order='1' />
+            <reference-line axis-column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' paired-distribution-id='refline0' probability='95' scope='per-pane' value-column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#877ca7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]</rows>
+        <cols>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:town:nk]</cols>
+      </table>
+      <simple-id uuid='{148565C3-F81F-4C8A-AE98-8FB1C770D1CA}' />
+    </worksheet>
+    <worksheet name='Average Price (Flat)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='22'>Avg price per flat type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd'>
+            <column caption='Fits Budget' datatype='string' name='[Calculation_2476698355450146816]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF AVG ([resale_price]) &gt; 300000 THEN&#13;&#10;&quot;Above budget&quot; ELSE &quot;Fits &#13;&#10;Budget&quot; END' />
+            </column>
+            <column datatype='real' name='[Core CPI]' role='measure' type='quantitative' />
+            <column-instance column='[Core CPI]' derivation='Avg' name='[avg:Core CPI:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resale_price]' derivation='Avg' name='[avg:resale_price:qk]' pivot='key' type='quantitative' />
+            <column caption='Flat Type' datatype='string' name='[flat_type]' role='dimension' type='nominal' />
+            <column-instance column='[flat_type]' derivation='None' name='[none:flat_type:nk]' pivot='key' type='nominal' />
+            <column caption='Resale Price' datatype='integer' name='[resale_price]' role='measure' type='quantitative' />
+            <column caption='Street Name' datatype='string' name='[street_name]' role='dimension' type='nominal' />
+            <column caption='Town' datatype='string' name='[town]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2476698355450146816]' derivation='User' name='[usr:Calculation_2476698355450146816:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Street Name,Town)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_60A91FFC03A94A6F911A0E8E0F26C1C0]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[street_name]' />
+              <groupfilter function='level-members' level='[town]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:flat_type:nk]'>
+            <groupfilter function='level-members' level='[none:flat_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]'>
+            <groupfilter function='level-members' level='[usr:Calculation_2476698355450146816:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]</column>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:flat_type:nk]</column>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Street Name,Town)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:Core CPI:qk]' field-type='quantitative' fold='true' max='95.234397668092384' min='-4.5155810076017993' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' field-type='quantitative' max='590274.58237617917' min='-27988.129905934125' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#aaaaff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:Core CPI:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk] + [federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:Core CPI:qk])</rows>
+        <cols>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:flat_type:nk]</cols>
+      </table>
+      <simple-id uuid='{0E400276-84F6-4C19-86E8-87D0E8DA6333}' />
+    </worksheet>
+    <worksheet name='HDB Areas'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='22'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd'>
+            <column-instance column='[latitude]' derivation='Avg' name='[avg:latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[longitude]' derivation='Avg' name='[avg:longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resale_price]' derivation='Avg' name='[avg:resale_price:qk]' pivot='key' type='quantitative' />
+            <column caption='Flat Type' datatype='string' name='[flat_type]' role='dimension' type='nominal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[street_name]' derivation='None' name='[none:street_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[town]' derivation='None' name='[none:town:nk]' pivot='key' type='nominal' />
+            <column caption='Price Psm' datatype='real' name='[price_psm]' role='measure' type='quantitative' />
+            <column caption='Resale Price' datatype='integer' name='[resale_price]' role='measure' type='quantitative' />
+            <column caption='Street Name' datatype='string' name='[street_name]' role='dimension' type='nominal' />
+            <column-instance column='[price_psm]' derivation='Sum' name='[sum:price_psm:qk]' pivot='key' type='quantitative' />
+            <column caption='Town' datatype='string' name='[town]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Flat Type)]'>
+            <groupfilter function='member' level='[flat_type]' member='&quot;4 ROOM&quot;' user:ui-action-filter='[Action2_CA31B24CBFBD4202BC3D8EFB889EDD9F]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Action (Flat Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:longitude:qk]' field-type='quantitative' max='11581052.333225643' min='11544081.895521272' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:latitude:qk]' field-type='quantitative' max='164452.57009681896' min='137096.62300949838' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#aaaaff' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='streets' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:town:nk]' />
+              <lod column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:street_name:nk]' />
+              <lod column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' />
+              <lod column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[sum:price_psm:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:latitude:qk]</rows>
+        <cols>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{EF0A556D-F6E8-4FFC-87B2-87A32C60538A}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='22'>Details about each town</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd'>
+            <column datatype='real' name='[Core CPI]' role='measure' type='quantitative' />
+            <column caption='Area Sqm' datatype='real' name='[area_sqm]' role='measure' type='quantitative' />
+            <column-instance column='[Core CPI]' derivation='Avg' name='[avg:Core CPI:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lease_rem]' derivation='Avg' name='[avg:lease_rem:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price_psm]' derivation='Avg' name='[avg:price_psm:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resale_price]' derivation='Avg' name='[avg:resale_price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[storey]' derivation='Avg' name='[avg:storey:qk]' pivot='key' type='quantitative' />
+            <column caption='Lease Rem' datatype='integer' name='[lease_rem]' role='measure' type='quantitative' />
+            <column-instance column='[area_sqm]' derivation='Median' name='[med:area_sqm:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[town]' derivation='None' name='[none:town:nk]' pivot='key' type='nominal' />
+            <column caption='Price Psm' datatype='real' name='[price_psm]' role='measure' type='quantitative' />
+            <column caption='Resale Price' datatype='integer' name='[resale_price]' role='measure' type='quantitative' />
+            <column caption='Storey' datatype='integer' name='[storey]' role='measure' type='quantitative' />
+            <column caption='Town' datatype='string' name='[town]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[med:area_sqm:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:Core CPI:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:lease_rem:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:price_psm:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:storey:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[med:area_sqm:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:Core CPI:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:lease_rem:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:price_psm:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]&quot;</bucket>
+              <bucket>&quot;[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:storey:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='quantitative' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' included-values='in-range'>
+            <min>63660.9375</min>
+            <max>443669.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[med:area_sqm:qk]' included-values='in-range'>
+            <min>65.0</min>
+            <max>123.0</max>
+          </filter>
+          <slices>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]</column>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]</column>
+            <column>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[med:area_sqm:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' value='74' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#aaaaff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Multiple Values]' />
+              <lod column='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]</rows>
+        <cols>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:town:nk]</cols>
+      </table>
+      <simple-id uuid='{018F20B4-8601-43B0-B280-BDD82AAAC032}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Longitude (generated)]' field-type='quantitative' max='10279327.893167607' min='-10665999.299443368' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Latitude (generated)]' field-type='quantitative' max='9175463.6129430961' min='-6431259.6760824621' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Latitude (generated)]</rows>
+        <cols>[federated.00hiyp81wep70c1gkh9ju02rpwgd].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{DCA5E413-DE40-468E-BB3D-74DEDCACC5B9}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5336ACC4-BF1E-4A81-966E-ABE320BE584A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='827' maxwidth='1169' minheight='827' minwidth='1169' preset-index='16' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+      </datasources>
+      <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd'>
+        <column caption='Fits Budget' datatype='string' name='[Calculation_2476698355450146816]' role='measure' type='nominal'>
+          <calculation class='tableau' formula='IF AVG ([resale_price]) &gt; 300000 THEN&#13;&#10;&quot;Above budget&quot; ELSE &quot;Fits &#13;&#10;Budget&quot; END' />
+        </column>
+        <column caption='Flat Type' datatype='string' name='[flat_type]' role='dimension' type='nominal' />
+        <column-instance column='[flat_type]' derivation='None' name='[none:flat_type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Calculation_2476698355450146816]' derivation='User' name='[usr:Calculation_2476698355450146816:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98066' id='7' param='horz' type-v2='layout-flow' w='98632' x='684' y='967'>
+            <zone h='98066' id='5' type-v2='layout-basic' w='84945' x='684' y='967'>
+              <zone h='49033' id='3' name='HDB Areas' w='84945' x='684' y='967'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49033' id='9' name='Areas within Budget' w='42473' x='43156' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49033' id='12' name='Average Price (Flat)' w='42472' x='684' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98066' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='13687' x='85629' y='967'>
+              <zone h='28539' id='8' name='HDB Areas' pane-specification-id='0' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:town:nk]' type-v2='color' w='13687' x='85629' y='967'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12696' id='10' name='Areas within Budget' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]' type-v2='filter' w='13687' x='85629' y='29506'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8827' id='11' name='Areas within Budget' pane-specification-id='0' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' type-v2='color' w='13687' x='85629' y='42202'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='26602' id='13' name='Average Price (Flat)' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:flat_type:nk]' type-v2='filter' w='13687' x='85629' y='51029'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12696' id='14' name='Average Price (Flat)' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]' type-v2='filter' w='13687' x='85629' y='77631'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8706' id='15' name='Average Price (Flat)' pane-specification-id='1' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' type-v2='color' w='13687' x='85629' y='90327'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{ACBA1D18-97A5-4A58-AA9B-79C918597865}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='Singapore Housing Dataset' name='federated.00hiyp81wep70c1gkh9ju02rpwgd' />
+      </datasources>
+      <datasource-dependencies datasource='federated.00hiyp81wep70c1gkh9ju02rpwgd'>
+        <column caption='Area Sqm' datatype='real' name='[area_sqm]' role='measure' type='quantitative' />
+        <column-instance column='[resale_price]' derivation='Avg' name='[avg:resale_price:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[area_sqm]' derivation='Median' name='[med:area_sqm:qk]' pivot='key' type='quantitative' />
+        <column caption='Resale Price' datatype='integer' name='[resale_price]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='98000' id='3' name='Sheet 4' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='9125' id='8' name='Sheet 4' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9125' id='9' name='Sheet 4' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[med:area_sqm:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='16000' x='83200' y='10125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{269B8B5E-B1CD-4768-AE2F-387D90C66D57}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='HDB Areas'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:town:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+        <default-map-unit-selection mapunit='1' />
+      </viewpoint>
+      <simple-id uuid='{18A5A78C-184D-4D90-AECE-8FED20D256A7}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Areas within Budget'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]' show-morefewerbutton='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BB7613BF-C010-46FC-8DB0-F589D6E823BC}' />
+    </window>
+    <window class='worksheet' name='Average Price (Flat)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[none:flat_type:nk]' type='filter' />
+            <card param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[usr:Calculation_2476698355450146816:nk]' show-morefewerbutton='false' type='filter' />
+            <card pane-specification-id='1' param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{750B0AA1-A3F8-45C1-BB56-3C5C78E9D926}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Areas within Budget'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average Price (Flat)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='HDB Areas'>
+          <zoom type='entire-view' />
+          <default-map-unit-selection mapunit='1' />
+        </viewpoint>
+      </viewpoints>
+      <active id='12' />
+      <simple-id uuid='{2E637C11-3C27-4905-B731-DEBDA513BD67}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[avg:resale_price:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.00hiyp81wep70c1gkh9ju02rpwgd].[med:area_sqm:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0BC1ACE1-DC43-4350-8DAB-109673678C0E}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7B2AE99F-950C-4ED2-8813-579003CFBD3E}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{44C477B0-632B-4E84-97D2-D33DB31BE287}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Sheet 4' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{D262B02E-8FB1-42EB-845A-DE894B2E7676}' />
+    </window>
+  </windows>
+</workbook>
